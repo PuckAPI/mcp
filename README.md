@@ -48,7 +48,9 @@ Claude: [calls get_player_stats x2 → side-by-side goals, assists, points, TOI,
 **Claude Code** -- one command:
 
 ```bash
-claude mcp add puckapi --transport streamable-http "https://mcp.puckapi.com/mcp?key=YOUR_API_KEY"
+claude mcp add puckapi \
+  --transport streamable-http \
+  "https://mcp.puckapi.com/mcp?key=YOUR_API_KEY"
 ```
 
 **Other MCP clients** -- any client supporting Streamable HTTP:
