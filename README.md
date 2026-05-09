@@ -5,7 +5,7 @@
 <br>
 <br>
 
-**NHL data for Claude and AI agents.** Connect to live stats, odds,<br>and line movement from 15+ sportsbooks in one line.
+**The hockey data API.** Stats, odds, and everything between.<br>REST API and MCP server. Free to start.
 
 <br>
 
