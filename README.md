@@ -109,7 +109,7 @@ PuckAPI also offers a REST API at `https://mcp.puckapi.com/v1/`. See the [API do
 - [Website](https://puckapi.com)
 - [Dashboard](https://puckapi.com/dashboard)
 - [API Docs](https://puckapi.com/docs)
-- [Free Claude Code Skills](https://github.com/noahowsh/claude-sports-analytics) (28 hockey analytics skills, no API key needed)
+- [Free Claude Code Skills](https://github.com/PuckAPI/claude-sports-analytics) (28 hockey analytics skills, no API key needed)
 
 ## License
 
