@@ -37,7 +37,7 @@
 
   <!-- Stats pills -->
   <rect x="290" y="205" width="100" height="28" rx="14" fill="none" stroke="#10b981" stroke-width="1.5" opacity="0.5"/>
-  <text x="340" y="224" text-anchor="middle" font-family="monospace" font-size="12" fill="#10b981" font-weight="600">12 Tools</text>
+  <text x="340" y="224" text-anchor="middle" font-family="monospace" font-size="12" fill="#10b981" font-weight="600">13 Tools</text>
 
   <rect x="402" y="205" width="115" height="28" rx="14" fill="none" stroke="#10b981" stroke-width="1.5" opacity="0.5"/>
   <text x="459" y="224" text-anchor="middle" font-family="monospace" font-size="12" fill="#10b981" font-weight="600">16+ Seasons</text>
