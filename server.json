@@ -1,0 +1,97 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.noahowsh/puckapi",
+  "title": "PuckAPI",
+  "description": "The hockey data API. Stats, odds, and everything between. REST API and MCP server.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/PuckAPI/mcp",
+    "source": "github",
+    "id": "1233426731"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/PuckAPI/mcp/main/assets/logo-400x400.png",
+      "mimeType": "image/png",
+      "sizes": ["400x400"]
+    }
+  ],
+  "homepage": "https://puckapi.com",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.puckapi.com/mcp",
+      "headers": [
+        {
+          "name": "x-api-key",
+          "description": "Your PuckAPI API key. Get a free key with 500 credits at puckapi.com/signup",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "list_teams",
+      "description": "All 32 active NHL teams with divisions, conferences, and arenas",
+      "readOnlyHint": true
+    },
+    {
+      "name": "get_standings",
+      "description": "Current standings with points, wins, losses, goal differential, and advanced stats",
+      "readOnlyHint": true
+    },
+    {
+      "name": "get_schedule",
+      "description": "Upcoming NHL games for the next N days",
+      "readOnlyHint": true
+    },
+    {
+      "name": "search_players",
+      "description": "Find NHL players by name, team, or position",
+      "readOnlyHint": true
+    },
+    {
+      "name": "get_games",
+      "description": "Query games by date, team, season, game state, or type",
+      "readOnlyHint": true
+    },
+    {
+      "name": "get_team_stats",
+      "description": "Detailed stats for a specific team with advanced metrics",
+      "readOnlyHint": true
+    },
+    {
+      "name": "get_player_stats",
+      "description": "Season stats for skaters and goalies with per-game averages",
+      "readOnlyHint": true
+    },
+    {
+      "name": "get_goalie_stats",
+      "description": "Goalie leaderboard sorted by save%, GAA, GSAX, or wins",
+      "readOnlyHint": true
+    },
+    {
+      "name": "get_odds",
+      "description": "Betting odds by game with bookmaker filters. Moneylines, spreads, totals.",
+      "readOnlyHint": true
+    },
+    {
+      "name": "get_game_detail",
+      "description": "Full game detail including odds, goalie starts, and scoring",
+      "readOnlyHint": true
+    },
+    {
+      "name": "get_head_to_head",
+      "description": "Matchup history between two teams with win/loss records",
+      "readOnlyHint": true
+    },
+    {
+      "name": "get_line_movement",
+      "description": "Time-series odds movement grouped by bookmaker",
+      "readOnlyHint": true
+    }
+  ]
+}
