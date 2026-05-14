@@ -1,0 +1,29 @@
+{
+  "name": "puckapi",
+  "version": "1.0.0",
+  "description": "NHL hockey data MCP server. Stats, odds, standings, player stats, line movement across 16 seasons.",
+  "main": "index.js",
+  "bin": {
+    "puckapi": "index.js"
+  },
+  "type": "module",
+  "keywords": [
+    "mcp",
+    "nhl",
+    "hockey",
+    "sports",
+    "api",
+    "odds",
+    "stats",
+    "model-context-protocol"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PuckAPI/mcp"
+  },
+  "homepage": "https://puckapi.com",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1"
+  }
+}
