@@ -2,7 +2,7 @@
 
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/streamableHttp.js";
-import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import { Server } from "@modelcontextprotocol/sdk/server/index.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 
 const API_KEY = process.env.PUCKAPI_API_KEY;
@@ -11,11 +11,9 @@ if (!API_KEY) {
   process.exit(1);
 }
 
-const REMOTE_URL = "https://mcp.puckapi.com/mcp";
-
 const client = new Client({ name: "puckapi-bridge", version: "1.0.0" });
 
-const transport = new StreamableHTTPClientTransport(new URL(REMOTE_URL), {
+const transport = new StreamableHTTPClientTransport(new URL("https://mcp.puckapi.com/mcp"), {
   requestInit: {
     headers: { "x-api-key": API_KEY },
   },
@@ -25,14 +23,22 @@ await client.connect(transport);
 
 const { tools } = await client.listTools();
 
-const server = new McpServer({ name: "puckapi", version: "1.0.0" });
+const server = new Server(
+  { name: "puckapi", version: "1.0.0" },
+  { capabilities: { tools: {} } },
+);
 
-for (const tool of tools) {
-  server.tool(tool.name, tool.description ?? "", tool.inputSchema?.properties ?? {}, async (params) => {
-    const result = await client.callTool({ name: tool.name, arguments: params });
-    return result;
+server.setRequestHandler({ method: "tools/list" }, async () => ({
+  tools,
+}));
+
+server.setRequestHandler({ method: "tools/call" }, async (request) => {
+  const result = await client.callTool({
+    name: request.params.name,
+    arguments: request.params.arguments,
   });
-}
+  return result;
+});
 
 const stdio = new StdioServerTransport();
 await server.connect(stdio);
