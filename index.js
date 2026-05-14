@@ -4,6 +4,7 @@ import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/streamableHttp.js";
 import { Server } from "@modelcontextprotocol/sdk/server/index.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import { ListToolsRequestSchema, CallToolRequestSchema } from "@modelcontextprotocol/sdk/types.js";
 
 const API_KEY = process.env.PUCKAPI_API_KEY;
 if (!API_KEY) {
@@ -28,11 +29,11 @@ const server = new Server(
   { capabilities: { tools: {} } },
 );
 
-server.setRequestHandler({ method: "tools/list" }, async () => ({
+server.setRequestHandler(ListToolsRequestSchema, async () => ({
   tools,
 }));
 
-server.setRequestHandler({ method: "tools/call" }, async (request) => {
+server.setRequestHandler(CallToolRequestSchema, async (request) => {
   const result = await client.callTool({
     name: request.params.name,
     arguments: request.params.arguments,
