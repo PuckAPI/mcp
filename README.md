@@ -10,7 +10,7 @@
 <br>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-10b981.svg?style=flat-square)](LICENSE)
-[![Tools](https://img.shields.io/badge/tools-13-10b981?style=flat-square)](#available-tools)
+[![Tools](https://img.shields.io/badge/tools-15-10b981?style=flat-square)](#available-tools)
 [![Seasons](https://img.shields.io/badge/seasons-16+-10b981?style=flat-square)](#data-coverage)
 [![Skills](https://img.shields.io/badge/skills-28-10b981?style=flat-square)](https://github.com/PuckAPI/claude-sports-analytics)
 
@@ -48,8 +48,7 @@ Claude: [calls get_player_stats x2 → side-by-side goals, assists, points, TOI,
 **Claude Code** -- one command:
 
 ```bash
-claude mcp add puckapi \
-  --transport streamable-http \
+claude mcp add --transport http puckapi \
   "https://mcp.puckapi.com/mcp?key=YOUR_API_KEY"
 ```
 
@@ -60,7 +59,7 @@ claude mcp add puckapi \
 | URL | `https://mcp.puckapi.com/mcp?key=YOUR_API_KEY` |
 | Transport | Streamable HTTP |
 
-<sub>Also accepts `Authorization: Bearer` or `x-api-key` headers for REST API usage.</sub>
+<sub>Also accepts `Authorization: Bearer` or `x-api-key` headers. Connecting and listing tools works without a key; calling a tool needs one.</sub>
 
 **Get your free key** at [puckapi.com](https://puckapi.com) -- 500 credits, no credit card.
 
@@ -116,8 +115,20 @@ claude mcp add puckapi \
 
 | Tool | Description |
 |------|-------------|
-| `get_odds` | Pre-game odds from 15+ sportsbooks (ML, spread, total) |
-| `get_line_movement` | Track how lines move from open to close |
+| `get_odds` | Opening and closing moneyline, puck line and total by sportsbook, back to 2020-21 |
+| `get_line_movement` | Time-series odds grouped by bookmaker |
+
+</details>
+
+<details>
+<summary><strong>Play-by-play</strong> -- 2 tools</summary>
+
+<br>
+
+| Tool | Description |
+|------|-------------|
+| `get_plays` | Play-by-play events with rink coordinates, strength state and the players involved |
+| `get_shot_map` | Every shot attempt with rink coordinates, shot type, shooter and goalie |
 
 </details>
 
@@ -127,12 +138,15 @@ claude mcp add puckapi \
 
 | Category | Details |
 |----------|---------|
-| **Seasons** | 2008-09 through current (16+) |
-| **Games** | 22,000+ with full box scores |
-| **Odds** | Pre-game ML, spread, totals from 15+ books |
-| **Line movement** | Opening to closing line tracking |
-| **Players** | 3,000+ skaters and goalies |
-| **Updates** | Scores and odds refresh throughout the day |
+| **Games** | 23,000+ across 16 seasons |
+| **Play-by-play** | Every event since 2010-11 with rink coordinates (6.8M+ events) |
+| **Odds** | Opening and closing lines back to 2020-21; 60+ books including Pinnacle from 2025-26 |
+| **Line movement** | Hourly snapshots from September 2026 |
+| **Players** | 4,800+ skaters and goalies |
+| **Computed** | Expected goals, GSAX, Corsi and Fenwick |
+| **Updates** | Games daily; odds captured hourly |
+
+Live coverage by season: [historical odds](https://puckapi.com/data/historical-odds) · [play-by-play](https://puckapi.com/data/play-by-play) · [shot data](https://puckapi.com/data/shot-data)
 
 ---
 
@@ -145,7 +159,7 @@ claude mcp add puckapi \
 | **Pro** | 30,000 | $49/mo |
 | **Scale** | 125,000 | $149/mo |
 
-Each tool call costs 1 credit. Top up anytime with wallet deposits.
+Tools cost 1 to 25 credits a call ([per-tool costs](https://puckapi.com/pricing)). Wallet top-ups from $5 never expire.
 
 ---
 
@@ -154,8 +168,8 @@ Each tool call costs 1 credit. Top up anytime with wallet deposits.
 PuckAPI also offers a standard REST API:
 
 ```bash
-curl -H "x-api-key: YOUR_API_KEY" \
-  https://mcp.puckapi.com/v1/get_standings
+curl -X POST https://mcp.puckapi.com/v1/get_standings \
+  -H "x-api-key: YOUR_API_KEY"
 ```
 
 Full documentation at [puckapi.com/docs](https://puckapi.com/docs).
