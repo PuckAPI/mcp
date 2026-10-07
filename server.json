@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.noahowsh/puckapi",
   "title": "PuckAPI",
-  "description": "The hockey API for stats, odds, and everything between. REST API and MCP server. Free to start.",
-  "version": "1.1.3",
+  "description": "NHL and PWHL stats, play-by-play, expected goals and odds. REST API and MCP server. Free to start.",
+  "version": "1.1.4",
   "license": "MIT",
   "repository": {
     "url": "https://github.com/PuckAPI/mcp",
