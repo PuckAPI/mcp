@@ -13,6 +13,7 @@
 [![Tools](https://img.shields.io/badge/tools-15-10b981?style=flat-square)](#available-tools)
 [![Seasons](https://img.shields.io/badge/seasons-16+-10b981?style=flat-square)](#data-coverage)
 [![Skills](https://img.shields.io/badge/skills-28-10b981?style=flat-square)](https://github.com/PuckAPI/claude-sports-analytics)
+[![Smithery](https://img.shields.io/badge/Smithery-listed-ff5601?style=flat-square)](https://smithery.ai/servers/noahowsh/PuckAPI)
 
 [Quick Start](#quick-start) · [Tools](#available-tools) · [Data](#data-coverage) · [Pricing](#pricing) · [REST API](#rest-api)
 
