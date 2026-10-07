@@ -144,6 +144,7 @@ claude mcp add --transport http puckapi \
 | **Line movement** | Hourly snapshots from September 2026 |
 | **Players** | 4,800+ skaters and goalies |
 | **Computed** | Expected goals, GSAX, Corsi and Fenwick |
+| **PWHL** | Games, standings, play-by-play and shot locations; pass `league: "pwhl"` ([details](https://puckapi.com/pwhl)) |
 | **Updates** | Games daily; odds captured hourly |
 
 Live coverage by season: [historical odds](https://puckapi.com/data/historical-odds) · [play-by-play](https://puckapi.com/data/play-by-play) · [shot data](https://puckapi.com/data/shot-data)
