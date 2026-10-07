@@ -10,7 +10,7 @@
 <br>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-10b981.svg?style=flat-square)](LICENSE)
-[![Tools](https://img.shields.io/badge/tools-15-10b981?style=flat-square)](#available-tools)
+[![Tools](https://img.shields.io/badge/tools-16-10b981?style=flat-square)](#available-tools)
 [![Seasons](https://img.shields.io/badge/seasons-16+-10b981?style=flat-square)](#data-coverage)
 [![Skills](https://img.shields.io/badge/skills-28-10b981?style=flat-square)](https://github.com/PuckAPI/claude-sports-analytics)
 [![Smithery](https://img.shields.io/badge/Smithery-listed-ff5601?style=flat-square)](https://smithery.ai/servers/noahowsh/PuckAPI)
@@ -96,7 +96,7 @@ claude mcp add --transport http puckapi \
 </details>
 
 <details>
-<summary><strong>Players</strong> -- 4 tools</summary>
+<summary><strong>Players</strong> -- 5 tools</summary>
 
 <br>
 
@@ -106,6 +106,7 @@ claude mcp add --transport http puckapi \
 | `get_player_stats` | Skater stats (goals, assists, points, TOI, etc.) |
 | `get_skater_season_stats` | Season stats leaderboard -- goals, assists, points, TOI, shooting %, filterable by team and sortable by 5 metrics |
 | `get_goalie_stats` | Goalie stats (SV%, GAA, wins, shutouts, etc.) |
+| `get_player_game_log` | Game-by-game lines for a skater or goalie in a season: goals, assists, shots, PIM, saves, SV% |
 
 </details>
 
@@ -141,7 +142,7 @@ claude mcp add --transport http puckapi \
 |----------|---------|
 | **Games** | 23,000+ across 16 seasons |
 | **Play-by-play** | Every event since 2010-11 with rink coordinates (6.8M+ events) |
-| **Odds** | Opening and closing lines back to 2020-21; 60+ books including Pinnacle from 2025-26 |
+| **Odds** | Opening and closing lines back to 2020-21; 60+ books including Pinnacle from 2025-26; 8 books captured hourly from October 2026 |
 | **Line movement** | Hourly snapshots from September 2026 |
 | **Players** | 4,800+ skaters and goalies |
 | **Computed** | Expected goals, GSAX, Corsi and Fenwick |

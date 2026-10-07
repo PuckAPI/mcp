@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.noahowsh/puckapi",
   "title": "PuckAPI",
-  "description": "The hockey data API. Stats, odds, and everything between. REST API and MCP server.",
-  "version": "1.0.0",
+  "description": "The hockey API for stats, odds, and everything between. REST API and MCP server. Free to start.",
+  "version": "1.1.3",
   "license": "MIT",
   "repository": {
     "url": "https://github.com/PuckAPI/mcp",
@@ -12,9 +12,11 @@
   },
   "icons": [
     {
-      "src": "https://raw.githubusercontent.com/PuckAPI/mcp/main/assets/logo-400x400.png",
+      "src": "https://github.com/PuckAPI/mcp/raw/main/assets/logo-400x400.png",
       "mimeType": "image/png",
-      "sizes": ["400x400"]
+      "sizes": [
+        "400x400"
+      ]
     }
   ],
   "homepage": "https://puckapi.com",
@@ -40,22 +42,22 @@
     },
     {
       "name": "get_standings",
-      "description": "Current standings with points, wins, losses, goal differential, and advanced stats",
+      "description": "Current standings with advanced stats",
       "readOnlyHint": true
     },
     {
       "name": "get_schedule",
-      "description": "Upcoming NHL games for the next N days",
+      "description": "Upcoming games for next N days",
       "readOnlyHint": true
     },
     {
       "name": "search_players",
-      "description": "Find NHL players by name, team, or position",
+      "description": "Find players by name, team, or position",
       "readOnlyHint": true
     },
     {
       "name": "get_games",
-      "description": "Query games by date, team, season, game state, or type",
+      "description": "Query by date, team, season, game state, or type",
       "readOnlyHint": true
     },
     {
@@ -65,7 +67,7 @@
     },
     {
       "name": "get_player_stats",
-      "description": "Season stats for skaters and goalies with per-game averages",
+      "description": "Player bio and team context; season line for skaters, goalie stats for goalies",
       "readOnlyHint": true
     },
     {
@@ -74,23 +76,43 @@
       "readOnlyHint": true
     },
     {
+      "name": "get_skater_season_stats",
+      "description": "Skater leaderboard sorted by points, goals, assists, +/-, or shots",
+      "readOnlyHint": true
+    },
+    {
+      "name": "get_player_game_log",
+      "description": "A player's game-by-game stat lines for a season, not a season total",
+      "readOnlyHint": true
+    },
+    {
       "name": "get_odds",
-      "description": "Betting odds by game with bookmaker filters. Moneylines, spreads, totals.",
+      "description": "Odds by game with bookmaker filters",
       "readOnlyHint": true
     },
     {
       "name": "get_game_detail",
-      "description": "Full game detail including odds, goalie starts, and scoring",
+      "description": "Full game detail with odds and goalie starts",
       "readOnlyHint": true
     },
     {
       "name": "get_head_to_head",
-      "description": "Matchup history between two teams with win/loss records",
+      "description": "Matchup history with win/loss records",
+      "readOnlyHint": true
+    },
+    {
+      "name": "get_plays",
+      "description": "Play-by-play events with rink coordinates, strength state, and the players involved",
+      "readOnlyHint": true
+    },
+    {
+      "name": "get_shot_map",
+      "description": "Every shot attempt with rink coordinates, shot type, shooter and goalie",
       "readOnlyHint": true
     },
     {
       "name": "get_line_movement",
-      "description": "Time-series odds movement grouped by bookmaker",
+      "description": "Time-series odds grouped by bookmaker",
       "readOnlyHint": true
     }
   ]
