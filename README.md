@@ -117,7 +117,7 @@ claude mcp add --transport http puckapi \
 
 | Tool | Description |
 |------|-------------|
-| `get_odds` | Opening and closing moneyline, puck line and total by sportsbook, back to 2020-21 |
+| `get_odds` | Opening and closing moneyline, puck line and total by sportsbook, every game from 2019-20 |
 | `get_line_movement` | Time-series odds grouped by bookmaker |
 
 </details>
@@ -142,7 +142,7 @@ claude mcp add --transport http puckapi \
 |----------|---------|
 | **Games** | 23,000+ across 16 seasons |
 | **Play-by-play** | Every event since 2010-11 with rink coordinates (6.8M+ events) |
-| **Odds** | Opening and closing lines back to 2020-21; 60+ books including Pinnacle from 2025-26; 8 books captured hourly from October 2026 |
+| **Odds** | Every game from 2019-20: about 12-14 books a game for 2020-21 to 2023-24, 60+ in 2025-26, and 8 books including Pinnacle captured hourly from October 2026 |
 | **Line movement** | Hourly snapshots from September 2026 |
 | **Players** | 4,800+ skaters and goalies |
 | **Computed** | Expected goals, GSAX, Corsi and Fenwick |
