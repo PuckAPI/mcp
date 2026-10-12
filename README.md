@@ -157,7 +157,7 @@ Live coverage by season: [historical odds](https://puckapi.com/data/historical-o
 
 | Plan | Credits/mo | Price |
 |------|-----------|-------|
-| **Free** | 500 | $0 |
+| **Free** | 500 every month | $0 |
 | **Starter** | 10,000 | $19/mo |
 | **Pro** | 30,000 | $49/mo |
 | **Scale** | 125,000 | $149/mo |
@@ -185,6 +185,19 @@ Full documentation at [puckapi.com/docs](https://puckapi.com/docs).
 |---|---|
 | **[PuckAPI Skills](https://github.com/PuckAPI/claude-sports-analytics)** | 28 free Claude Code skills for hockey analytics, betting models, and research |
 | **[puckapi.com](https://puckapi.com)** | Sign up, dashboard, API docs |
+| **[NHL odds tonight](https://puckapi.com/odds)** | Every tracked sportsbook's moneyline, puck line and total, refreshed hourly |
+
+### Other sports, same tools and key format
+
+| | |
+|---|---|
+| **[EndzoneAPI](https://github.com/noahowsh/endzoneapi-mcp)** | NFL and college football |
+| **[DunkAPI](https://github.com/noahowsh/dunkapi-mcp)** | NBA, WNBA and college basketball |
+| **[FastballAPI](https://github.com/noahowsh/fastballapi-mcp)** | MLB and college baseball |
+| **[StrikerAPI](https://github.com/noahowsh/strikerapi-mcp)** | Soccer, 17 competitions |
+| **[AcesAPI](https://github.com/noahowsh/acesapi-mcp)** | ATP and WTA tennis |
+| **[BirdieAPI](https://github.com/noahowsh/birdieapi-mcp)** | PGA Tour and other golf tours |
+| **[FighterAPI](https://github.com/noahowsh/fighterapi-mcp)** | UFC, PFL and Bellator |
 
 ---
 
