@@ -186,6 +186,8 @@ Full documentation at [puckapi.com/docs](https://puckapi.com/docs).
 | **[PuckAPI Skills](https://github.com/PuckAPI/claude-sports-analytics)** | 28 free Claude Code skills for hockey analytics, betting models, and research |
 | **[puckapi.com](https://puckapi.com)** | Sign up, dashboard, API docs |
 | **[NHL odds tonight](https://puckapi.com/odds)** | Every tracked sportsbook's moneyline, puck line and total, refreshed hourly |
+| **[NHL player props today](https://puckapi.com/props)** | Points, goals, shots, saves and anytime scorer: the consensus line and the best over and under price per player |
+| **[Shots on goal prop history](https://puckapi.com/guides/nhl-shots-on-goal-prop-history-python)** | How often a player goes over his shots line, game by game, in Python |
 
 ### Other sports, same tools and key format
 
