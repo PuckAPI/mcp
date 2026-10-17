@@ -179,6 +179,10 @@ Full documentation at [puckapi.com/docs](https://puckapi.com/docs).
 
 ---
 
+## Used by
+
+[PuckCast](https://puckcast.ai/), our NHL predictions site, runs on this API.
+
 ## Related
 
 | | |
