@@ -10,7 +10,7 @@
 <br>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-10b981.svg?style=flat-square)](LICENSE)
-[![Tools](https://img.shields.io/badge/tools-16-10b981?style=flat-square)](#available-tools)
+[![Tools](https://img.shields.io/badge/tools-28-10b981?style=flat-square)](#available-tools)
 [![Seasons](https://img.shields.io/badge/seasons-16+-10b981?style=flat-square)](#data-coverage)
 [![Skills](https://img.shields.io/badge/skills-28-10b981?style=flat-square)](https://github.com/PuckAPI/claude-sports-analytics)
 [![Smithery](https://img.shields.io/badge/Smithery-listed-ff5601?style=flat-square)](https://smithery.ai/servers/noahowsh/PuckAPI)
@@ -66,75 +66,48 @@ claude mcp add --transport http puckapi \
 
 ---
 
+## Use it in
+
+- **Claude, ChatGPT, Cursor, VS Code, Gemini CLI, Grok, Perplexity, Le Chat:** add `https://mcp.puckapi.com/mcp` as a remote MCP server. Step-by-step for each: https://puckapi.com/mcp
+- **Cursor:** the [SportsDataHQ plugins for Cursor](https://github.com/noahowsh/sportsdatahq-cursor-plugins)
+- **Google Sheets:** `=SDHQ("puckapi","list_teams")` fills a live table: https://sportsdatahq.com/sheets
+- **Claude Code skills:** [28 free NHL analytics skills](https://github.com/PuckAPI/claude-sports-analytics)
+- **REST:** `POST https://mcp.puckapi.com/v1/<tool>` with an `x-api-key` header: https://puckapi.com/docs
+
 ## Available Tools
 
-<details open>
-<summary><strong>Games</strong> -- 4 tools</summary>
+28 tools. Credits per call in the second column.
 
-<br>
-
-| Tool | Description |
-|------|-------------|
-| `get_games` | Game results with scores, periods, shots, and goals |
-| `get_schedule` | Upcoming and past game schedules |
-| `get_game_detail` | Full box score for a specific game |
-| `get_head_to_head` | Historical matchup data between two teams |
-
-</details>
-
-<details>
-<summary><strong>Teams</strong> -- 3 tools</summary>
-
-<br>
-
-| Tool | Description |
-|------|-------------|
-| `get_standings` | Current or historical standings by season |
-| `get_team_stats` | Team-level stats (goals, shots, PP%, PK%, etc.) |
-| `list_teams` | All NHL teams with abbreviations and metadata |
-
-</details>
-
-<details>
-<summary><strong>Players</strong> -- 5 tools</summary>
-
-<br>
-
-| Tool | Description |
-|------|-------------|
-| `search_players` | Find players by name |
-| `get_player_stats` | Skater stats (goals, assists, points, TOI, etc.) |
-| `get_skater_season_stats` | Season stats leaderboard -- goals, assists, points, TOI, shooting %, filterable by team and sortable by 5 metrics |
-| `get_goalie_stats` | Goalie stats (SV%, GAA, wins, shutouts, etc.) |
-| `get_player_game_log` | Game-by-game lines for a skater or goalie in a season: goals, assists, shots, PIM, saves, SV% |
-
-</details>
-
-<details>
-<summary><strong>Odds</strong> -- 2 tools</summary>
-
-<br>
-
-| Tool | Description |
-|------|-------------|
-| `get_odds` | Opening and closing moneyline, puck line and total by sportsbook, every game from 2019-20 |
-| `get_line_movement` | Time-series odds grouped by bookmaker |
-
-</details>
-
-<details>
-<summary><strong>Play-by-play</strong> -- 2 tools</summary>
-
-<br>
-
-| Tool | Description |
-|------|-------------|
-| `get_plays` | Play-by-play events with rink coordinates, strength state and the players involved |
-| `get_shot_map` | Every shot attempt with rink coordinates, shot type, shooter and goalie |
-
-</details>
-
----
+| Tool | Credits | What it returns |
+|------|---------|-----------------|
+| `list_teams` | 1 | Use when you need team abbreviations, or to see all 32 active NHL teams with city, conference, division, and arena. |
+| `get_schedule` | 2 | Use when checking what games are coming up. |
+| `get_standings` | 2 | Use when checking where teams rank in their division or conference. |
+| `search_players` | 2 | Use when looking up a player by name. |
+| `get_game_probabilities` | 5 | Use for what the market thinks of one game, not any one book's price: the average implied probability (margin in) and the fair probability (margin out) for the moneyline, each puck line and each total, with how many books each rests on. |
+| `get_games` | 5 | Use when querying past or future games with filters. |
+| `get_goalie_stats` | 5 | Use when ranking goalies or comparing goalie performance. |
+| `get_player_game_log` | 5 | Use when you need a player's game-by-game stat lines for a season, not a season total. |
+| `get_player_stats` | 5 | Use when you need full details for one player: bio, team, and physical attributes. |
+| `get_predictions` | 5 | Use for the model's win probability for each NHL game on the current slate: home and away win probability, the A/B/C confidence grade, start time, plus the model version and when the slate was generated. |
+| `get_skater_season_stats` | 5 | Use when ranking skaters or comparing scoring. |
+| `get_team_stats` | 5 | Use when you need full details for one team: record, goals for and against, league rank, and 5v5 possession (Corsi%, Fenwick%, expected goals for and against). |
+| `get_alt_lines` | 10 | Use for alternate puck lines and totals by sportsbook: every point on each book's ladder with its price (e.g. -8.5 at +240, over 230.5 at +165), for one game. |
+| `get_game_detail` | 10 | Use when you need everything about one game: both teams' full info, all betting odds, and the goalies who started, with their time on ice. |
+| `get_head_to_head` | 10 | Use when comparing two teams' history. |
+| `get_market_odds` | 10 | Use for the extra betting markets of a game as history: the regulation result (three-way, a draw is possible), the 1st period result and puck line, and the 1st, 2nd and 3rd period totals. |
+| `get_odds` | 10 | Use when checking betting lines. |
+| `get_player_props` | 10 | Use for player prop lines by sportsbook: over/under on points, goals, assists, shots on goal, blocked shots, goalie saves, power-play points, anytime and first goal scorer, from May 2023 (DraftKings, FanDuel, BetMGM, ESPN BET, Pinnacle and others). |
+| `get_plays` | 10 | Use for play-by-play events: goals, shots, misses, blocks, faceoffs, hits, giveaways, takeaways, penalties, with rink coordinates, strength state (5v5, 5v4), zone, and the players involved. |
+| `get_prop_history` | 10 | Use to see how a player did against his prop line over time: for one market (points, goals, assists, shots on goal, blocked shots, goalie saves, power-play points, or anytime or first goal scorer), one row per game with the closing line (the median across books, or one book's), the opening line (the same as the close wherever only one capture was taken), the prices, what the player actually recorded from our box scores and the result against the line, plus the over rate, up to 200 games a call. |
+| `get_prop_movement` | 10 | Use to see how one player's prop line moved before a game: every capture we hold, book by book and oldest first, with the line, both prices and the minutes before the start. line_change is the last capture's line minus the first's. |
+| `get_prop_probabilities` | 10 | Use for what the market thinks of the player props in one game, not any one book's price: for each player and each line, the average implied probability (margin in) and the fair probability (margin out), with how many books each rests on. |
+| `get_shifts` | 10 | Use for who was on the ice and when: every player's shifts in one NHL game, each with period, start and end (period clock and seconds from the opening faceoff) and duration, plus the official boxscore time on ice and plus/minus. |
+| `get_shot_map` | 10 | Use when you want shot locations rather than a list of events: every shot attempt with rink coordinates, shot type, strength, shooter and goalie. |
+| `get_situation_time` | 10 | Use for exact time at each strength: the seconds each team spent at 5v5, 5v4, 4v5, 4v4, 6v5 with the goalie pulled and every other on-ice state in an NHL game, split into regulation and overtime, from the shift charts. |
+| `get_line_movement` | 25 | Use when analyzing how betting lines moved over time. |
+| `get_prop_backtest` | 25 | Use to test an idea about player props without pulling every row: how often a kind of prop went over or under against what the market implied, across every finished game we hold prices for that fits your filters. |
+| `get_prop_projections` | 25 | Paid plans only (not available on the free plan). |
 
 ## Data Coverage
 
