@@ -92,7 +92,7 @@ claude mcp add --transport http puckapi \
 | `get_predictions` | 5 | Use for the model's win probability for each NHL game on the current slate: home and away win probability, the A/B/C confidence grade, start time, plus the model version and when the slate was generated. |
 | `get_skater_season_stats` | 5 | Use when ranking skaters or comparing scoring. |
 | `get_team_stats` | 5 | Use when you need full details for one team: record, goals for and against, league rank, and 5v5 possession (Corsi%, Fenwick%, expected goals for and against). |
-| `get_alt_lines` | 10 | Use for alternate puck lines and totals by sportsbook: every point on each book's ladder with its price (e.g. -8.5 at +240, over 230.5 at +165), for one game. |
+| `get_alt_lines` | 10 | Use for alternate puck lines and totals by sportsbook: every point on each book's ladder with its price (e.g. -2.5 at +250, over 7.5 at +160), for one game. |
 | `get_game_detail` | 10 | Use when you need everything about one game: both teams' full info, all betting odds, and the goalies who started, with their time on ice. |
 | `get_head_to_head` | 10 | Use when comparing two teams' history. |
 | `get_market_odds` | 10 | Use for the extra betting markets of a game as history: the regulation result (three-way, a draw is possible), the 1st period result and puck line, and the 1st, 2nd and 3rd period totals. |
