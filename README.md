@@ -66,6 +66,10 @@ claude mcp add --transport http puckapi \
 
 ---
 
+## Starter projects
+
+- [nhl-xg-model](https://github.com/noahowsh/nhl-xg-model): a season of shot locations to a calibrated expected-goals model, in one Python script.
+
 ## Use it in
 
 - **Claude, ChatGPT, Cursor, VS Code, Gemini CLI, Grok, Perplexity, Le Chat:** add `https://mcp.puckapi.com/mcp` as a remote MCP server. Step-by-step for each: https://puckapi.com/mcp
