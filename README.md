@@ -62,7 +62,7 @@ claude mcp add --transport http puckapi \
 
 <sub>Also accepts `Authorization: Bearer` or `x-api-key` headers. Connecting and listing tools works without a key; calling a tool needs one.</sub>
 
-**Get your free key** at [puckapi.com](https://puckapi.com) -- 500 credits, no credit card.
+**Get your free key** at [puckapi.com](https://puckapi.com?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp) -- 500 credits, no credit card.
 
 ---
 
@@ -72,11 +72,11 @@ claude mcp add --transport http puckapi \
 
 ## Use it in
 
-- **Claude, ChatGPT, Cursor, VS Code, Gemini CLI, Grok, Perplexity, Le Chat:** add `https://mcp.puckapi.com/mcp` as a remote MCP server. Step-by-step for each: https://puckapi.com/mcp
+- **Claude, ChatGPT, Cursor, VS Code, Gemini CLI, Grok, Perplexity, Le Chat:** add `https://mcp.puckapi.com/mcp` as a remote MCP server. Step-by-step for each: https://puckapi.com/mcp?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp
 - **Cursor:** the [SportsDataHQ plugins for Cursor](https://github.com/noahowsh/sportsdatahq-cursor-plugins)
-- **Google Sheets:** `=SDHQ("puckapi","list_teams")` fills a live table: https://sportsdatahq.com/sheets
+- **Google Sheets:** `=SDHQ("puckapi","list_teams")` fills a live table: https://sportsdatahq.com/sheets?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp
 - **Claude Code skills:** [28 free NHL analytics skills](https://github.com/PuckAPI/claude-sports-analytics)
-- **REST:** `POST https://mcp.puckapi.com/v1/<tool>` with an `x-api-key` header: https://puckapi.com/docs
+- **REST:** `POST https://mcp.puckapi.com/v1/<tool>` with an `x-api-key` header: https://puckapi.com/docs?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp
 
 ## Available Tools
 
@@ -123,10 +123,10 @@ claude mcp add --transport http puckapi \
 | **Line movement** | Hourly snapshots from September 2026 |
 | **Players** | 4,800+ skaters and goalies |
 | **Computed** | Expected goals, GSAX, Corsi and Fenwick |
-| **PWHL** | Games, standings, play-by-play and shot locations; pass `league: "pwhl"` ([details](https://puckapi.com/pwhl)) |
+| **PWHL** | Games, standings, play-by-play and shot locations; pass `league: "pwhl"` ([details](https://puckapi.com/pwhl?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp)) |
 | **Updates** | Games daily; odds captured hourly |
 
-Live coverage by season: [historical odds](https://puckapi.com/data/historical-odds) · [play-by-play](https://puckapi.com/data/play-by-play) · [shot data](https://puckapi.com/data/shot-data)
+Live coverage by season: [historical odds](https://puckapi.com/data/historical-odds?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp) · [play-by-play](https://puckapi.com/data/play-by-play?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp) · [shot data](https://puckapi.com/data/shot-data?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp)
 
 ---
 
@@ -139,7 +139,7 @@ Live coverage by season: [historical odds](https://puckapi.com/data/historical-o
 | **Pro** | 30,000 | $49/mo |
 | **Scale** | 125,000 | $149/mo |
 
-Tools cost 1 to 25 credits a call ([per-tool costs](https://puckapi.com/pricing)). Wallet top-ups from $5 never expire.
+Tools cost 1 to 25 credits a call ([per-tool costs](https://puckapi.com/pricing?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp)). Wallet top-ups from $5 never expire.
 
 ---
 
@@ -152,7 +152,7 @@ curl -X POST https://mcp.puckapi.com/v1/get_standings \
   -H "x-api-key: YOUR_API_KEY"
 ```
 
-Full documentation at [puckapi.com/docs](https://puckapi.com/docs).
+Full documentation at [puckapi.com/docs](https://puckapi.com/docs?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp).
 
 ---
 
@@ -165,10 +165,10 @@ Full documentation at [puckapi.com/docs](https://puckapi.com/docs).
 | | |
 |---|---|
 | **[PuckAPI Skills](https://github.com/PuckAPI/claude-sports-analytics)** | 28 free Claude Code skills for hockey analytics, betting models, and research |
-| **[puckapi.com](https://puckapi.com)** | Sign up, dashboard, API docs |
-| **[NHL odds tonight](https://puckapi.com/odds)** | Every tracked sportsbook's moneyline, puck line and total, refreshed hourly |
-| **[NHL player props today](https://puckapi.com/props)** | Points, goals, shots, saves and anytime scorer: the consensus line and the best over and under price per player |
-| **[Shots on goal prop history](https://puckapi.com/guides/nhl-shots-on-goal-prop-history-python)** | How often a player goes over his shots line, game by game, in Python |
+| **[puckapi.com](https://puckapi.com?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp)** | Sign up, dashboard, API docs |
+| **[NHL odds tonight](https://puckapi.com/odds?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp)** | Every tracked sportsbook's moneyline, puck line and total, refreshed hourly |
+| **[NHL player props today](https://puckapi.com/props?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp)** | Points, goals, shots, saves and anytime scorer: the consensus line and the best over and under price per player |
+| **[Shots on goal prop history](https://puckapi.com/guides/nhl-shots-on-goal-prop-history-python?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp)** | How often a player goes over his shots line, game by game, in Python |
 
 ### Other sports, same tools and key format
 
@@ -186,7 +186,7 @@ Full documentation at [puckapi.com/docs](https://puckapi.com/docs).
 
 <div align="center">
 
-**[puckapi.com](https://puckapi.com)** · **[API Docs](https://puckapi.com/docs)** · **[Skills](https://github.com/PuckAPI/claude-sports-analytics)**
+**[puckapi.com](https://puckapi.com?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp)** · **[API Docs](https://puckapi.com/docs?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp)** · **[Skills](https://github.com/PuckAPI/claude-sports-analytics)**
 
 <sub>MIT License</sub>
 
