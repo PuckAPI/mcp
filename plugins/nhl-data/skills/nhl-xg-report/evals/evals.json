@@ -1,0 +1,54 @@
+{
+  "skill": "nhl-xg-report",
+  "tasks": [
+    {
+      "prompt": "Are the Oilers' results matching their 5v5 expected goals?",
+      "expect": [
+        "get_team_stats called with team and season",
+        "5v5 base stated",
+        "games counted, no luck verdict from small samples"
+      ]
+    },
+    {
+      "prompt": "Did Colorado deserve that win last night?",
+      "expect": [
+        "get_shot_map or get_plays for the game",
+        "shots and locations reported",
+        "no invented game xG; says if xG is not in the rows"
+      ]
+    },
+    {
+      "prompt": "Compare a goalie's expected goals against with the team's xGA",
+      "expect": [
+        "declines to difference goalie and team xG",
+        "points at nhl-goalie-gsax-report"
+      ]
+    }
+  ],
+  "triggers": {
+    "should": [
+      "did they deserve to win that game",
+      "are the Oilers getting good chances",
+      "team xG for and against",
+      "who is getting lucky",
+      "shot quality in last night's game",
+      "is their record real",
+      "xGF% for Carolina",
+      "who outscores their expected goals",
+      "high danger chances in the Leafs game",
+      "are they winning on shot quality or goaltending"
+    ],
+    "should_not": [
+      "preview tonight's NHL games",
+      "who has the best GSAX",
+      "build an xG model with XGBoost",
+      "puck line prices",
+      "goalie save percentage leaderboard",
+      "McDavid scouting report",
+      "standings by division",
+      "playoff simulation",
+      "xG in soccer",
+      "power play percentage for the Capitals"
+    ]
+  }
+}

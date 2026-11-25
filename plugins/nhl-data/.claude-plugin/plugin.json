@@ -1,0 +1,23 @@
+{
+  "name": "nhl-data",
+  "displayName": "PuckAPI: hockey skills",
+  "version": "2.0.0",
+  "description": "Hockey analysis skills on PuckAPI: game previews, player and team research, and the community's standard metrics, with every number pulled live from the PuckAPI MCP server.",
+  "author": {
+    "name": "SportsDataHQ",
+    "url": "https://sportsdatahq.com"
+  },
+  "homepage": "https://puckapi.com/skills",
+  "repository": "https://github.com/sports-data-hq/sportsdatahq-skills",
+  "license": "MIT",
+  "keywords": [
+    "nhl",
+    "hockey",
+    "pwhl",
+    "ahl",
+    "xg",
+    "gsax",
+    "sports-data",
+    "puckapi"
+  ]
+}

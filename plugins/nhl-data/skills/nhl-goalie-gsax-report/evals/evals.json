@@ -1,0 +1,54 @@
+{
+  "skill": "nhl-goalie-gsax-report",
+  "tasks": [
+    {
+      "prompt": "Who has the best GSAX in the NHL this season?",
+      "expect": [
+        "get_goalie_stats with sort_by gsax and min_games stated",
+        "games shown beside GSAX",
+        "no recomputation"
+      ]
+    },
+    {
+      "prompt": "Is Connor Hellebuyck just well defended?",
+      "expect": [
+        "finds his row, shows save percentage next to expected goals against and GSAX",
+        "small samples flagged",
+        "does not mix with team 5v5 xG"
+      ]
+    },
+    {
+      "prompt": "Who is starting in goal tonight?",
+      "expect": [
+        "says announced starters are not in the data",
+        "offers get_game_detail for played games"
+      ]
+    }
+  ],
+  "triggers": {
+    "should": [
+      "is he a good goalie or just well defended",
+      "who has the best GSAX",
+      "goalie leaderboard by goals saved above expected",
+      "is his save percentage sustainable",
+      "high-danger save percentage for Shesterkin",
+      "is the goalie slumping",
+      "rolling GSAX for Hellebuyck",
+      "worst goalies by goals saved above expected",
+      "who is overperforming in net",
+      "did the Sabres goalie steal that game"
+    ],
+    "should_not": [
+      "preview Bruins vs Leafs",
+      "who starts in net tonight",
+      "build an xG model",
+      "goalie props for tonight",
+      "team Corsi for the Oilers",
+      "shot map for McDavid",
+      "best skater by points",
+      "standings in the Atlantic",
+      "explain what GSAX means in general",
+      "goalie stats for the PWHL champion"
+    ]
+  }
+}

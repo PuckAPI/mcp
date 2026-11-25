@@ -32,6 +32,44 @@ You:    "Compare McDavid and MacKinnon this season"
 Claude: [calls get_player_stats x2 → side-by-side goals, assists, points, TOI, shooting %]
 ```
 
+## Skills
+
+17 Claude skills for hockey ship in this repo, plus 14 analytics skills for models, backtests, calibration and comparing a model with the market. Every number in an answer comes from a live PuckAPI tool call, and odds are information only: no stakes, no picks.
+
+Claude Code:
+
+```
+/plugin marketplace add PuckAPI/mcp
+/plugin install nhl-data@puckapi
+/plugin install sports-analytics-core@puckapi
+```
+
+Codex: `codex plugin marketplace add PuckAPI/mcp`. Any agent that reads skills: `npx skills add PuckAPI/mcp`.
+
+| Skill | What it does |
+|---|---|
+| `nhl-advanced-stats` | Corsi, Fenwick, xG, PDO, GSAx and the rest explained, with real numbers on request |
+| `nhl-daily-slate` | Tonight's slate: each game's market probability beside our model, ranked by the gap |
+| `nhl-game-lookup` | Find games by date, team, matchup or season: results, schedule and head-to-head history |
+| `nhl-game-preview` | One-page preview: records and rest, the goalie matchup, key stats and the market probability |
+| `nhl-goalie-analysis` | Goalies on shot-quality-adjusted numbers: goals saved above expected, high-danger save rate, form |
+| `nhl-goalie-gsax-report` | A goals-saved-above-expected report from the goalie leaderboard, with rolling form |
+| `nhl-odds-explorer` | Prices across books as implied and fair probability, with line movement |
+| `nhl-player-props-research` | Prop lines by sportsbook, the player's record against his line and movement, as information |
+| `nhl-player-scouting` | Player search, season stats, game logs, per-game rates and multi-season trends |
+| `nhl-playoff-simulation` | Playoff chances by simulation from the standings, the schedule left and team ratings |
+| `nhl-puckapi-tools` | Picks the right PuckAPI tool for a request and keeps track of credit cost |
+| `nhl-research-workflow` | Four research patterns: exploration, hypothesis tests, model iteration and performance reports |
+| `nhl-team-analysis` | Team standings, stats, strength of schedule and rankings |
+| `nhl-totals-model` | A calibrated total-goals model for a game, compared with the market total as probability |
+| `nhl-war-gar` | Player value from shift data: RAPM ridge regression toward WAR and GAR |
+| `nhl-xg-model` | Train an expected-goals model on shot locations and events, with walk-forward validation |
+| `nhl-xg-report` | The expected-goals story of a team or game: who deserved to win, and finishing against expected |
+
+The analytics skills: `backtesting`, `data-pipeline`, `elo-engineering`, `feature-engineering`, `market-vs-model`, `model-building`, `nl-to-query`, `odds-market-analysis`, `prediction-tracker`, `probability-calibration`, `sports-data-preflight`, `sports-skill-router`, `visualization`, `walk-forward-validation`.
+
+All nine sports' skills live in [sports-data-hq/sportsdatahq-skills](https://github.com/sports-data-hq/sportsdatahq-skills). The copies here are synced from there, so please open issues and pull requests there.
+
 ## Quick Start
 
 **Claude Desktop** -- add to `claude_desktop_config.json`:
