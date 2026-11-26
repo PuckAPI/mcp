@@ -32,6 +32,14 @@ You:    "Compare McDavid and MacKinnon this season"
 Claude: [calls get_player_stats x2 → side-by-side goals, assists, points, TOI, shooting %]
 ```
 
+## Try it now, no key
+
+- **A free season of hockey data:** the last completed season as CSV (games, standings, player season totals and our ratings). [Download the zip](https://github.com/PuckAPI/mcp/releases/download/season-pack/puckapi-season-pack.zip) or browse [what's in it](data/README.md).
+- **Open it in Colab:** [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PuckAPI/mcp/blob/main/notebooks/puckapi-season-pack.ipynb) loads the pack and answers three questions in a minute.
+- **Ask Claude without a key:** install the skills below; `season-pack-offline` answers from the pack until you connect.
+
+**With a free key it does far more:** every earlier season, today's games, play-by-play, lineups, odds and player props with their history and movement, and every skill below running on live data. [Get a free key](https://puckapi.com/signup?utm_source=github&utm_medium=readme&utm_campaign=puckapi-try-now): 500 credits a month, no card.
+
 ## Skills
 
 17 Claude skills for hockey ship in this repo, plus 15 analytics skills for models, backtests, calibration and comparing a model with the market. Every number in an answer comes from a live PuckAPI tool call, and odds are information only: no stakes, no picks.
