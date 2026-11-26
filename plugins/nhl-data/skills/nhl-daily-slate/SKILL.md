@@ -2,7 +2,7 @@
 name: nhl-daily-slate
 description: "Use when the user asks what is on tonight, wants the full NHL slate, every game today, a daily rundown, or which games the model sees differently from the market. Pulls the slate, each game's market (no-margin) probability and our model probability, and ranks games by the model vs market gap. Odds are information only: no stakes, picks or wagering advice. Not for one game in depth (use nhl-game-preview), a plain schedule or results lookup (use nhl-game-lookup), odds-only comparison (use nhl-odds-explorer) or historical testing (use backtesting)."
 metadata:
-  version: 2.0.0
+  version: 2.1.0
   author: SportsDataHQ
 ---
 

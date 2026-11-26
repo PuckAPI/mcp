@@ -2,7 +2,7 @@
 name: nhl-goalie-analysis
 description: "Use when the user asks about NHL goalie stats, save percentage, GAA, who the best goalie is, whether a goalie is overrated or running hot, goalie fatigue, back-to-back starts, tandems, or how a goalie does against a team. Returns shot-quality-adjusted numbers (goals saved above expected, high-danger save percentage, rolling form) that hold up better than raw save percentage. Not for skaters (use nhl-player-scouting), team shot suppression (use nhl-team-analysis), goalie model features (use feature-engineering) or goalie saves props (use nhl-player-props-research)."
 metadata:
-  version: 2.0.0
+  version: 2.1.0
   author: SportsDataHQ
 ---
 

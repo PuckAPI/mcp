@@ -2,7 +2,7 @@
 name: nhl-goalie-gsax-report
 description: "Use when the user asks whether an NHL goalie's results are real or just the team in front of him, in fan or analyst wording: 'is Hellebuyck actually elite', 'is his .925 sustainable', 'goalie stealing games?', 'who is the best by GSAx', 'which goalie is getting bailed out', 'high-danger saves for Vasilevskiy', 'is he cold or just unlucky', 'goalie rankings by shot quality'. Use this whenever goalie performance is judged against shot quality. Load it for short fragments and follow-ups too, even with no name given, instead of answering from memory or going straight to the raw tools. Reads GSAX, expected goals against, high-danger save percentage and the rolling form fields from the goalie leaderboard, with games counted. Not for who starts tonight, rest or back-to-backs, a general goalie lookup (see nhl-goalie-analysis), a game preview (see nhl-game-preview), goalie props or building an xG model (see nhl-xg-model)."
 metadata:
-  version: 2.0.0
+  version: 2.1.0
   author: SportsDataHQ
 ---
 

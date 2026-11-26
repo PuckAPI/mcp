@@ -2,7 +2,7 @@
 name: nhl-odds-explorer
 description: "Use when the user asks what the NHL lines or prices are for a game, in fan or analyst wording: 'what are the books saying about Panthers tonight', 'who is the favorite and by how much', 'which book has the best number on the Oilers', 'did the line move today', 'what is the total on Sabres Bruins', 'how big is the juice here', 'alt puck lines', 'first period market'. Use this whenever a hockey game and its price, spread, total or market chance come up. Load it for short fragments and follow-ups too, instead of answering from memory or going straight to the raw tools. Compares moneylines, puck lines and totals across books with implied and no-margin probability and line movement. Odds are information only, no stakes or picks. Not for odds math in general (see odds-market-analysis), our model against the market (see market-vs-model), player props (see nhl-player-props-research) or results."
 metadata:
-  version: 2.0.0
+  version: 2.1.0
   author: SportsDataHQ
 ---
 

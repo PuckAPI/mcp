@@ -2,7 +2,7 @@
 name: nhl-war-gar
 description: "Use when the user asks how valuable an NHL skater really is, in fan or analyst wording: 'who is the most valuable skater', 'McDavid WAR', 'is he underrated by the box score', 'what is his impact without his linemates', 'value over a replacement winger', 'is his contract worth it', 'who drives results with or without his partner', 'RAPM for Hamilton'. Use this whenever a skater's true impact, WAR, GAR or value over replacement is the subject. Load it for short fragments and follow-ups too, instead of answering from memory or going straight to the raw tools. Builds RAPM from shifts and plays and gives a player card with component breakdown and sample sizes. Not for plain stat lookups (see nhl-player-scouting), goalies (see nhl-goalie-analysis), team form (see nhl-team-analysis) or game prediction (see model-building)."
 metadata:
-  version: 2.0.0
+  version: 2.1.0
   author: SportsDataHQ
 ---
 

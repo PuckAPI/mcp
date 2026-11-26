@@ -2,7 +2,7 @@
 name: nhl-team-analysis
 description: "Use when the user asks how a team is doing, where a team sits in the division or conference, what their record is, who is in a playoff spot, how two teams compare, or how hard a schedule has been. Reads standings and team stats from the PuckAPI MCP server. Not for individual skaters (use nhl-player-scouting). Not for goalie numbers (use nhl-goalie-analysis). Not for building model features (use feature-engineering). Not for a single upcoming game (use nhl-game-preview)."
 metadata:
-  version: 2.0.0
+  version: 2.1.0
   author: SportsDataHQ
 ---
 

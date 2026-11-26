@@ -2,7 +2,7 @@
 name: nhl-game-lookup
 description: "Use when the user asks who plays tonight, what is on the schedule, when a team plays next, what happened in last night's game, the score, or the head-to-head record between two teams. Finds NHL games by date, team, matchup or season: results, upcoming schedule and head-to-head history. Not for how a team is performing (use nhl-team-analysis), odds or lines (use nhl-odds-explorer), a full pre-game report (use nhl-game-preview) or player stats (use nhl-player-scouting)."
 metadata:
-  version: 2.0.0
+  version: 2.1.0
   author: SportsDataHQ
 ---
 

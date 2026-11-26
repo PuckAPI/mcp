@@ -2,7 +2,7 @@
 name: nhl-player-scouting
 description: "Use when the user asks how an NHL player is playing, a player's points per game, a team's top scorers, to compare two skaters, how a prospect from another league translates to the NHL (NHLe), or wants stats for fantasy. Searches players and gives season stats, game logs, per-game rates and multi-season trends. Not for goalies (use nhl-goalie-analysis), team-level analysis (use nhl-team-analysis), WAR or GAR (use nhl-war-gar) or prop projections (use nhl-player-props-research)."
 metadata:
-  version: 2.0.0
+  version: 2.1.0
   author: SportsDataHQ
 ---
 

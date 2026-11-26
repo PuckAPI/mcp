@@ -2,7 +2,7 @@
 name: nhl-research-workflow
 description: "Use when the user asks how to analyze hockey data with Claude, how to structure an analysis session, how to test a hunch about a team or player, how to improve a model that is stuck, or how to write up model performance. Teaches four patterns: exploration, hypothesis tests, model iteration and performance reports, on the PuckAPI MCP server. Not for one specific lookup (use nhl-game-lookup or nl-to-query). Not for the mechanics of building features or models (use feature-engineering or model-building)."
 metadata:
-  version: 2.0.0
+  version: 2.1.0
   author: SportsDataHQ
 ---
 

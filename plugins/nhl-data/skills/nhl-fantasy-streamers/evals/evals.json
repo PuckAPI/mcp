@@ -1,0 +1,56 @@
+{
+  "skill": "nhl-fantasy-streamers",
+  "tasks": [
+    {
+      "prompt": "Which goalies should I stream this week?",
+      "expect": [
+        "games per team and back-to-backs",
+        "start share with n and inferred label",
+        "GSAX and rest days",
+        "availability unchecked"
+      ]
+    },
+    {
+      "prompt": "Who has the best power play role among defensemen I could add?",
+      "expect": [
+        "TOI and PP points per game with n",
+        "role change flag",
+        "no confirmed unit claimed"
+      ]
+    },
+    {
+      "prompt": "Is Dylan Strome's ice time up lately?",
+      "expect": [
+        "last 10 games TOI from game log",
+        "last 5 vs prior 10 comparison",
+        "sample size"
+      ]
+    }
+  ],
+  "triggers": {
+    "should": [
+      "goalie to stream this week",
+      "which teams have four games this week",
+      "who has back-to-backs and which goalie plays",
+      "power play guys to add",
+      "defenseman with shots and blocks to pick up",
+      "rest of the week waiver adds",
+      "is his ice time up",
+      "hot goalie worth stashing",
+      "who is on the first power play now",
+      "Monday to Thursday schedule streamers"
+    ],
+    "should_not": [
+      "preview Bruins at Rangers",
+      "is Shesterkin a good goalie",
+      "build a DraftKings hockey lineup",
+      "Matthews shots on goal prop",
+      "NHL standings",
+      "who will win the Cup",
+      "explain GSAX",
+      "fantasy football waivers",
+      "NHL goalie GSAX leaderboard",
+      "playoff odds for the Oilers"
+    ]
+  }
+}

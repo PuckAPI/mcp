@@ -42,7 +42,7 @@ Claude: [calls get_player_stats x2 → side-by-side goals, assists, points, TOI,
 
 ## Skills
 
-17 Claude skills for hockey ship in this repo, plus 15 analytics skills for models, backtests, calibration and comparing a model with the market. Every number in an answer comes from a live PuckAPI tool call, and odds are information only: no stakes, no picks.
+19 Claude skills for hockey ship in this repo, plus 15 analytics skills for models, backtests, calibration and comparing a model with the market. Every number in an answer comes from a live PuckAPI tool call, and odds are information only: no stakes, no picks.
 
 Claude Code:
 
@@ -58,6 +58,8 @@ Codex: `codex plugin marketplace add PuckAPI/mcp`. Any agent that reads skills: 
 |---|---|
 | `nhl-advanced-stats` | Corsi, Fenwick, xG, PDO, GSAx and the rest explained, with real numbers on request |
 | `nhl-daily-slate` | Tonight's slate: each game's market probability beside our model, ranked by the gap |
+| `nhl-dfs-lineup` | Build a lineup under the cap from your salary file, with line and power-play stacks |
+| `nhl-fantasy-streamers` | Who to stream: games in the window, goalie start share, ice time and power-play role |
 | `nhl-game-lookup` | Find games by date, team, matchup or season: results, schedule and head-to-head history |
 | `nhl-game-preview` | One-page preview: records and rest, the goalie matchup, key stats and the market probability |
 | `nhl-goalie-analysis` | Goalies on shot-quality-adjusted numbers: goals saved above expected, high-danger save rate, form |

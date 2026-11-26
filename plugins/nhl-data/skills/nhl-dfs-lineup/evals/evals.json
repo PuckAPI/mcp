@@ -1,0 +1,56 @@
+{
+  "skill": "nhl-dfs-lineup",
+  "tasks": [
+    {
+      "prompt": "Build my DraftKings NHL lineup from tonight's salary file (pasted)",
+      "expect": [
+        "roster slots and cap stated",
+        "projection source stated",
+        "goalie points formula with derived goals against",
+        "salary under cap"
+      ]
+    },
+    {
+      "prompt": "Which line should I stack tonight? Salaries pasted",
+      "expect": [
+        "stack from file or ice time with source labelled",
+        "power play evidence",
+        "no confirmed line claimed"
+      ]
+    },
+    {
+      "prompt": "Cheap goalie options tonight under 7,500",
+      "expect": [
+        "goalies from the file only",
+        "saves line and win probability",
+        "GSAX noted"
+      ]
+    }
+  ],
+  "triggers": {
+    "should": [
+      "build my hockey DraftKings lineup",
+      "tonight's salary file, make a lineup",
+      "which line to stack tonight",
+      "cheap goalie options for tonight",
+      "value defensemen on this slate",
+      "FanDuel hockey lineup under the cap",
+      "project tonight's NHL slate in fantasy points",
+      "stack a power play unit",
+      "optimize this NHL salary file",
+      "give me two NHL DFS lineups"
+    ],
+    "should_not": [
+      "goalie to stream this week in fantasy hockey",
+      "who has four games this week",
+      "is Hellebuyck good this season",
+      "Matthews anytime goal price",
+      "preview Leafs vs Bruins",
+      "how much should I enter in contests",
+      "which contest to enter",
+      "NBA DFS lineup",
+      "NHL standings",
+      "explain Corsi"
+    ]
+  }
+}
