@@ -122,7 +122,7 @@ claude mcp add --transport http puckapi \
 - **Claude, ChatGPT, Cursor, VS Code, Gemini CLI, Grok, Perplexity, Le Chat:** add `https://mcp.puckapi.com/mcp` as a remote MCP server. Step-by-step for each: https://puckapi.com/mcp?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp
 - **Cursor:** the [SportsDataHQ plugins for Cursor](https://github.com/sports-data-hq/sportsdatahq-cursor-plugins)
 - **Google Sheets:** `=SDHQ("puckapi","list_teams")` fills a live table: https://sportsdatahq.com/sheets?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp
-- **Claude Code skills:** [28 free NHL analytics skills](https://github.com/PuckAPI/claude-sports-analytics)
+- **Claude Code skills:** [16 free hockey skills](#skills), part of [sports-data-hq/sportsdatahq-skills](https://github.com/sports-data-hq/sportsdatahq-skills)
 - **REST:** `POST https://mcp.puckapi.com/v1/<tool>` with an `x-api-key` header: https://puckapi.com/docs?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp
 
 ## Available Tools
@@ -212,7 +212,7 @@ Full documentation at [puckapi.com/docs](https://puckapi.com/docs?utm_source=git
 
 | | |
 |---|---|
-| **[PuckAPI Skills](https://github.com/PuckAPI/claude-sports-analytics)** | 28 free Claude Code skills for hockey analytics, betting models, and research |
+| **[SportsDataHQ skills](https://github.com/sports-data-hq/sportsdatahq-skills)** | 16 hockey skills in this repo, 89 across nine sports: previews, props research, goalie and xG reports, models |
 | **[puckapi.com](https://puckapi.com?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp)** | Sign up, dashboard, API docs |
 | **[NHL odds tonight](https://puckapi.com/odds?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp)** | Every tracked sportsbook's moneyline, puck line and total, refreshed hourly |
 | **[NHL player props today](https://puckapi.com/props?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp)** | Points, goals, shots, saves and anytime scorer: the consensus line and the best over and under price per player |
@@ -234,7 +234,7 @@ Full documentation at [puckapi.com/docs](https://puckapi.com/docs?utm_source=git
 
 <div align="center">
 
-**[puckapi.com](https://puckapi.com?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp)** · **[API Docs](https://puckapi.com/docs?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp)** · **[Skills](https://github.com/PuckAPI/claude-sports-analytics)**
+**[puckapi.com](https://puckapi.com?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp)** · **[API Docs](https://puckapi.com/docs?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp)** · **[Skills](https://github.com/sports-data-hq/sportsdatahq-skills)**
 
 <sub>MIT License</sub>
 
