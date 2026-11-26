@@ -1,0 +1,55 @@
+{
+  "skill": "nhl-playoff-simulation",
+  "tasks": [
+    {
+      "prompt": "What are the Sabres' chances to make the playoffs?",
+      "expect": [
+        "get_standings and get_schedule used as inputs",
+        "iteration count and games remaining stated",
+        "probabilities under 5% reported with iteration count"
+      ]
+    },
+    {
+      "prompt": "Who is most likely to win the Stanley Cup right now?",
+      "expect": [
+        "ratings built from tool data, not memory",
+        "table of Cup probabilities with iterations",
+        "caveats about rating uncertainty"
+      ]
+    },
+    {
+      "prompt": "Simulate the Central Division race",
+      "expect": [
+        "division winner probabilities",
+        "season convention 20252026 stated",
+        "says not enough data early in the season"
+      ]
+    }
+  ],
+  "triggers": {
+    "should": [
+      "do the Red Wings get in",
+      "how likely is Vegas to win it all",
+      "who finishes first in the Metro",
+      "odds the Kings avoid a wild card",
+      "run the season 10000 times",
+      "chance Utah gets a playoff spot",
+      "how many points do the Leafs need to clinch",
+      "bracket sim for the East",
+      "who's winning the Atlantic",
+      "cup contenders ranked by probability"
+    ],
+    "should_not": [
+      "who wins tonight's Bruins game",
+      "Sabres current record",
+      "build a game win probability model",
+      "McDavid goals pace",
+      "what is a Monte Carlo simulation",
+      "Super Bowl odds",
+      "line for the Oilers tonight",
+      "standings explained",
+      "goalie ranks",
+      "NBA playoff picture"
+    ]
+  }
+}

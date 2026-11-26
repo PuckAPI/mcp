@@ -1,0 +1,55 @@
+{
+  "skill": "nhl-puckapi-tools",
+  "tasks": [
+    {
+      "prompt": "Which tool gives me a player's game-by-game stats?",
+      "expect": [
+        "names get_player_game_log",
+        "states credit cost from endpoints.md",
+        "mentions search_players for the id first"
+      ]
+    },
+    {
+      "prompt": "I want line movement for tonight's Oilers game, what does it cost?",
+      "expect": [
+        "names get_line_movement",
+        "cost of 25 credits",
+        "points at get_odds as the cheaper snapshot"
+      ]
+    },
+    {
+      "prompt": "Is there a tool for zone entries?",
+      "expect": [
+        "says no such tool exists",
+        "offers closest real tools such as get_plays",
+        "does not invent a tool name"
+      ]
+    }
+  ],
+  "triggers": {
+    "should": [
+      "which endpoint returns shifts",
+      "how many credits does get_odds use",
+      "what can I pull for goalies",
+      "do you have a tool for power play time",
+      "where do I get standings data",
+      "how do I get prop lines through the server",
+      "list all the hockey tools",
+      "what's the cheapest way to see team stats",
+      "can I get shot locations and what does it cost",
+      "which call gives me the starting goalies"
+    ],
+    "should_not": [
+      "who won last night",
+      "analyze Boston's shot quality",
+      "explain Corsi",
+      "build an xG model",
+      "should I bet Edmonton",
+      "what is the NBA tool list",
+      "predict the Cup winner",
+      "how to install the plugin on Windows",
+      "backtest my model",
+      "Draisaitl points per game"
+    ]
+  }
+}

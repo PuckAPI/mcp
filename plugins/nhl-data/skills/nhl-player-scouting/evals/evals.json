@@ -1,0 +1,55 @@
+{
+  "skill": "nhl-player-scouting",
+  "tasks": [
+    {
+      "prompt": "How is Macklin Celebrini playing this season?",
+      "expect": [
+        "search_players then get_skater_season_stats or get_player_stats",
+        "points per game with games played",
+        "season convention stated"
+      ]
+    },
+    {
+      "prompt": "Compare Kucherov and MacKinnon this year",
+      "expect": [
+        "both players pulled with tools",
+        "per-game rates side by side",
+        "small-sample warning if few games"
+      ]
+    },
+    {
+      "prompt": "How would a 60-point OHL season translate to the NHL?",
+      "expect": [
+        "NHLe factor stated as an estimate",
+        "league and age context caveat",
+        "no certainty claimed"
+      ]
+    }
+  ],
+  "triggers": {
+    "should": [
+      "is Hutson any good",
+      "points per game for Michkov",
+      "who are the Oilers' top scorers",
+      "Bedard last 10 games",
+      "fantasy stats for Jack Hughes",
+      "scoring leader on the Wild",
+      "Matthews vs Draisaitl goals",
+      "is Zibanejad slumping",
+      "who's hot on the Flyers",
+      "how do KHL numbers translate to NHL points"
+    ],
+    "should_not": [
+      "who's the best goalie",
+      "WAR for Makar",
+      "team power rankings",
+      "Oilers standings",
+      "goals prop for McDavid tonight",
+      "who won last night",
+      "explain Corsi",
+      "build a player projection model",
+      "playoff odds for Montreal",
+      "how many yards did Mahomes throw"
+    ]
+  }
+}

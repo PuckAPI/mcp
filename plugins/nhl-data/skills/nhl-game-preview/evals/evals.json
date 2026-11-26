@@ -1,0 +1,56 @@
+{
+  "skill": "nhl-game-preview",
+  "tasks": [
+    {
+      "prompt": "Preview Sabres at Maple Leafs tonight",
+      "expect": [
+        "get_schedule then get_team_stats and get_goalie_stats for both teams",
+        "goalie matchup with games played",
+        "market probability labelled as the market's, ours labelled as ours",
+        "no pick"
+      ]
+    },
+    {
+      "prompt": "Who's in goal for the Oilers game and does it matter?",
+      "expect": [
+        "get_game_detail for starting goalies",
+        "says if the starter is unconfirmed",
+        "rolling goalie numbers with sample size"
+      ]
+    },
+    {
+      "prompt": "Compare Colorado and Dallas before their game Friday",
+      "expect": [
+        "get_head_to_head with meetings counted",
+        "rest days for both teams",
+        "odds snapshot with captured_at time"
+      ]
+    }
+  ],
+  "triggers": {
+    "should": [
+      "break down the Wild vs Blues game",
+      "what should I know before the Rangers game tonight",
+      "is the Lightning game a tough matchup",
+      "two teams comparison for tomorrow's Canucks game",
+      "who's starting in net for Boston tonight",
+      "quick scouting report on tonight's Devils game",
+      "how do the Flames stack up against the Kings in this one",
+      "pre-game notes Stars at Jets",
+      "anything I should know about Carolina tonight",
+      "give me the matchup for the Habs game"
+    ],
+    "should_not": [
+      "all tonight's games ranked by model gap",
+      "what was the score of the Capitals game",
+      "goalie GSAX across the league",
+      "who is the best skater on the Sharks",
+      "line movement for Oilers puck line",
+      "build a team ratings model",
+      "NHL standings by division",
+      "Celtics vs Knicks preview",
+      "Wild playoff chances",
+      "explain xG"
+    ]
+  }
+}

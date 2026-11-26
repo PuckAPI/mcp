@@ -1,0 +1,55 @@
+{
+  "skill": "nhl-war-gar",
+  "tasks": [
+    {
+      "prompt": "How valuable is Quinn Hughes really?",
+      "expect": [
+        "get_shifts and get_plays used for RAPM",
+        "ridge alpha and minutes stated",
+        "intervals reported on the estimate"
+      ]
+    },
+    {
+      "prompt": "Is Marner's contract worth it by WAR?",
+      "expect": [
+        "WAR is an estimate with an interval",
+        "does not call a precise dollar figure fact",
+        "declines to rank players under about 200 minutes"
+      ]
+    },
+    {
+      "prompt": "Give me a player card for Makar with component breakdown",
+      "expect": [
+        "offence, defence and special teams components",
+        "sample in games and minutes",
+        "season convention 20252026"
+      ]
+    }
+  ],
+  "triggers": {
+    "should": [
+      "who is the most valuable skater in the league",
+      "wins above replacement for McDavid",
+      "is Hischier underrated by the box score",
+      "isolate Hamilton's impact from his linemates",
+      "who drives results with and without his partner",
+      "value over a replacement level winger",
+      "who actually moves the needle on the Panthers",
+      "how good is Pettersson once you strip out his teammates",
+      "what's Draisaitl worth in wins",
+      "on-ice impact ranking for defensemen"
+    ],
+    "should_not": [
+      "McDavid points per game",
+      "goalie GSAX",
+      "team standings",
+      "explain Corsi",
+      "Celebrini goals this year",
+      "Oilers odds tonight",
+      "build an xG model",
+      "backtest a game model",
+      "playoff odds",
+      "who won last night"
+    ]
+  }
+}

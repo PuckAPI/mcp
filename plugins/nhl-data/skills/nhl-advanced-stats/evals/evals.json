@@ -1,0 +1,55 @@
+{
+  "skill": "nhl-advanced-stats",
+  "tasks": [
+    {
+      "prompt": "What does PDO tell me and is Utah's number a problem?",
+      "expect": [
+        "explains PDO as shooting% plus save%",
+        "calls get_team_stats for Utah with season",
+        "games played stated; small-sample warning under about 20 games"
+      ]
+    },
+    {
+      "prompt": "Is Corsi or Fenwick better for judging a team?",
+      "expect": [
+        "defines both and the difference (blocked shots)",
+        "does not call a tool for a pure concept question unless asked for numbers",
+        "no invented league values"
+      ]
+    },
+    {
+      "prompt": "Show me Carolina's high-danger chances and say whether they are lucky",
+      "expect": [
+        "get_team_stats called with team and season",
+        "reports expectedGoalsFor and expectedGoalsAgainst from the rows",
+        "season convention stated; no luck verdict from a small sample"
+      ]
+    }
+  ],
+  "triggers": {
+    "should": [
+      "is Colorado's record legit or are they riding luck",
+      "what does xGF% even mean",
+      "why do people say 100 is the PDO average",
+      "explain RAPM like I'm new",
+      "are the Panthers just getting bounced shots",
+      "whats CF% and why does everyone care",
+      "is a 54 Corsi good",
+      "how do I read these shot quality numbers for the Stars",
+      "puck possession stats explained, what counts",
+      "which stat tells me if a hot goalie streak is sustainable"
+    ],
+    "should_not": [
+      "who plays tonight",
+      "build me an expected goals model in Python",
+      "what are the odds on Oilers vs Flames",
+      "McDavid's points last 10 games",
+      "explain implied probability from -150",
+      "playoff odds for Detroit",
+      "goalie GSAX leaderboard",
+      "calculate WAR for Quinn Hughes",
+      "how is Elo calculated",
+      "what does xG mean in soccer"
+    ]
+  }
+}

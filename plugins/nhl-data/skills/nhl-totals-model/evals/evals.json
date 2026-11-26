@@ -1,0 +1,56 @@
+{
+  "skill": "nhl-totals-model",
+  "tasks": [
+    {
+      "prompt": "How many goals will Oilers vs Flames have tonight?",
+      "expect": [
+        "get_games history and get_team_stats pace features",
+        "distribution of total goals, not a single number",
+        "market total shown as the market's, gap in probability",
+        "no pick"
+      ]
+    },
+    {
+      "prompt": "Does a backup goalie change the total?",
+      "expect": [
+        "goalie features from get_goalie_stats",
+        "sample size for backup starts",
+        "interval reported, says not enough data if thin"
+      ]
+    },
+    {
+      "prompt": "Build an over/under model for the NHL",
+      "expect": [
+        "walk-forward split, no random split",
+        "calibration check on the probabilities",
+        "baseline of the league average total"
+      ]
+    }
+  ],
+  "triggers": {
+    "should": [
+      "predict total goals for the Devils game",
+      "will tonight's game go over 6",
+      "scoring pace for the Sabres this month",
+      "do low-event teams go under more",
+      "model the over under",
+      "how many goals in Stars Avs",
+      "expected total for the Leafs game",
+      "does fatigue raise scoring",
+      "probability a game ends 5-4 or higher",
+      "distribution of goals per game for the Bruins"
+    ],
+    "should_not": [
+      "who wins the game",
+      "Matthews goals prop",
+      "current lines only",
+      "explain what an over/under is",
+      "puck line model",
+      "Hellebuyck save percentage",
+      "NBA totals model",
+      "standings",
+      "who has the best power play",
+      "how to size an over bet"
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 ---
 name: nhl-war-gar
-description: "Use when the user asks about WAR, GAR, RAPM, wins above replacement, how valuable a player really is, whether a contract is good value, or wants a player card with component breakdown. Builds RAPM ridge regression on shift data from the PuckAPI MCP server (get_shifts, get_plays). Not for simple stat lookups (use nhl-player-scouting). Not for goalies, who use GSAx (use nhl-goalie-analysis). Not for team standings or form (use nhl-team-analysis). Not for game prediction (use model-building)."
+description: "Use when the user asks how valuable an NHL skater really is, in fan or analyst wording: 'who is the most valuable skater', 'McDavid WAR', 'is he underrated by the box score', 'what is his impact without his linemates', 'value over a replacement winger', 'is his contract worth it', 'who drives results with or without his partner', 'RAPM for Hamilton'. Use this whenever a skater's true impact, WAR, GAR or value over replacement is the subject. Load it for short fragments and follow-ups too, instead of answering from memory or going straight to the raw tools. Builds RAPM from shifts and plays and gives a player card with component breakdown and sample sizes. Not for plain stat lookups (see nhl-player-scouting), goalies (see nhl-goalie-analysis), team form (see nhl-team-analysis) or game prediction (see model-building)."
 metadata:
   version: 2.0.0
   author: SportsDataHQ

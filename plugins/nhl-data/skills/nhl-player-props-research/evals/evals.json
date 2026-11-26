@@ -1,0 +1,56 @@
+{
+  "skill": "nhl-player-props-research",
+  "tasks": [
+    {
+      "prompt": "How many shots will Matthews have tonight?",
+      "expect": [
+        "get_prop_projections or get_player_game_log for the window",
+        "get_player_props line and get_prop_probabilities",
+        "games in window stated; projection given with a range",
+        "no pick or stake"
+      ]
+    },
+    {
+      "prompt": "How has Draisaitl done against his points line this season?",
+      "expect": [
+        "get_prop_history called",
+        "hit rate with sample size",
+        "does not present past hit rate as a pick"
+      ]
+    },
+    {
+      "prompt": "What's Hellebuyck's saves line and is the starter confirmed?",
+      "expect": [
+        "get_player_props for saves",
+        "says not enough data if starter unconfirmed",
+        "opponent shot volume from get_team_stats"
+      ]
+    }
+  ],
+  "triggers": {
+    "should": [
+      "will MacKinnon get 4 shots",
+      "Kucherov points projection for tonight",
+      "how often does Hughes hit the over on assists",
+      "who is likely to score tonight",
+      "anytime scorer chances for Ovechkin",
+      "how did the line on Marner's points move",
+      "DFS projections for the Oilers game",
+      "saves total for Shesterkin",
+      "does Celebrini's shot prop hit at home",
+      "goal line for Panarin"
+    ],
+    "should_not": [
+      "scouting report on Bedard",
+      "who leads the league in goals",
+      "over/under for the total goals in tonight's game",
+      "predict who wins Rangers Bruins",
+      "build a goal scoring model for players",
+      "explain the anytime scorer market",
+      "should I take the over on Matthews",
+      "compare McDavid and MacKinnon points per game",
+      "what time is the game",
+      "Cale Makar contract value"
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "skill": "nhl-daily-slate",
+  "tasks": [
+    {
+      "prompt": "Give me tonight's NHL slate with where the model disagrees with the market",
+      "expect": [
+        "get_schedule or get_games for the date",
+        "get_predictions and get_game_probabilities per game",
+        "games ranked by model minus market gap",
+        "no picks or stake advice"
+      ]
+    },
+    {
+      "prompt": "Which game today has the biggest gap between us and the books?",
+      "expect": [
+        "market no-margin probability labelled as the market's",
+        "our probability labelled as ours",
+        "gap in percentage points, flagged as information only"
+      ]
+    },
+    {
+      "prompt": "What's on tonight if it's an off day for the league?",
+      "expect": [
+        "says no games found with the date queried",
+        "does not invent a slate",
+        "season convention stated"
+      ]
+    }
+  ],
+  "triggers": {
+    "should": [
+      "rundown of every game today",
+      "anything interesting on the board tonight",
+      "how many games are on this Saturday and what does the model think",
+      "where do we disagree with the market today",
+      "all tonight's matchups with win chances",
+      "slate for tomorrow",
+      "whos playing and what are the chances for each",
+      "give me the full card for tonite",
+      "sort today's games by model edge over the market",
+      "morning rundown of the league"
+    ],
+    "should_not": [
+      "preview Sabres at Leafs in detail",
+      "what was the score of the Rangers game last night",
+      "line movement on Bruins vs Habs",
+      "who won the Cup in 2023",
+      "backtest the model across three seasons",
+      "NBA slate tonight",
+      "how many goals will the Oilers game have",
+      "who should I bet on tonight",
+      "Hellebuyck save percentage",
+      "explain what no-margin probability is"
+    ]
+  }
+}

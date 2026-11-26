@@ -1,6 +1,6 @@
 ---
 name: nhl-puckapi-tools
-description: "Use when any hockey skill needs data, or when the user asks which PuckAPI tool to call for games, schedules, standings, team or player stats, goalies, shots, shifts, odds, line movement or player props. Routes requests to the right tool of the PuckAPI MCP server and tracks credit cost. Not for analysis or modeling (use nhl-advanced-stats, model-building or market-vs-model). Not for recommending wagers: prices are shown as information only."
+description: "Use when any hockey skill needs data, or when the user asks which PuckAPI tool or endpoint to call, in developer wording: 'which tool gives me shifts', 'do you have a tool for power play time', 'where do I get standings data', 'how do I pull odds history', 'what does get_game_detail return', 'how many credits does this cost', 'cheapest way to get goalie stats', 'can the API do player props', 'what can this API do'. Use this whenever the question is about which tool exists, its inputs, outputs or credit costs. Routes a request to the right tool of the PuckAPI MCP server and tracks credit cost. Not for answering hockey questions with numbers (see the matching nhl skill), modeling (see model-building) or recommending wagers: prices are information only."
 metadata:
   version: 2.0.0
   author: SportsDataHQ

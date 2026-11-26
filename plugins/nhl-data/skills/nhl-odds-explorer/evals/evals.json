@@ -1,0 +1,56 @@
+{
+  "skill": "nhl-odds-explorer",
+  "tasks": [
+    {
+      "prompt": "What are the lines on Oilers vs Flames?",
+      "expect": [
+        "get_odds for the game",
+        "books compared with count and captured time",
+        "implied and fair probability shown",
+        "no pick"
+      ]
+    },
+    {
+      "prompt": "How has the Rangers total moved since open?",
+      "expect": [
+        "get_line_movement called",
+        "opening and latest line with timestamps",
+        "movement described, no claim about who is sharp"
+      ]
+    },
+    {
+      "prompt": "What's the vig on the Lightning moneyline?",
+      "expect": [
+        "margin computed from both sides",
+        "explains fair (no-margin) probability",
+        "information only"
+      ]
+    }
+  ],
+  "triggers": {
+    "should": [
+      "what are books saying about tonight's Panthers game",
+      "who's the favorite in Wild vs Blues and by how much",
+      "price comparison across sportsbooks for Avs",
+      "did the Leafs line move today",
+      "what's the over/under on Sabres Bruins",
+      "alt puck lines for the Stars game",
+      "market chance the Canucks win",
+      "which book has the best number on Edmonton",
+      "first period result market for the Devils",
+      "how big is the juice on this one"
+    ],
+    "should_not": [
+      "who won last night",
+      "convert -140 to a percentage in general",
+      "is our model better than closing lines over three seasons",
+      "Matthews anytime goal scorer prop history",
+      "should I bet the over",
+      "NFL spreads for Sunday",
+      "explain what a puck line is",
+      "build a totals model",
+      "how accurate are the model's predictions so far",
+      "Sabres roster"
+    ]
+  }
+}

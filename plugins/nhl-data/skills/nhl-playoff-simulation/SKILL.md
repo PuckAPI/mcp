@@ -1,6 +1,6 @@
 ---
 name: nhl-playoff-simulation
-description: "Use when the user asks about playoff odds, a team's chances to make the playoffs, who wins the division, Stanley Cup probability, how likely a team is to win the Cup, a season simulation or a bracket simulation. Runs a Monte Carlo season and playoff simulator on PuckAPI standings and schedule. Not for one game's win probability (use model-building or nhl-game-preview). Not for team stats without a simulation (use nhl-team-analysis). Not for player questions (use nhl-player-scouting)."
+description: "Use when the user asks about NHL playoff, seeding or Cup chances, in fan or analyst wording: 'will the Wings make the playoffs', 'Cup odds for Colorado', 'who finishes first in the division', 'how likely is a wild card spot', 'can they catch Boston', 'simulate the rest of the season', 'run the season ten thousand times', 'bracket simulation', 'who lifts the Cup'. Use this whenever a team's path, seed, division finish or title chance is the subject. Load it for short fragments and follow-ups too, instead of answering from memory or going straight to the raw tools. Runs a Monte Carlo season and playoff simulation on standings and schedule and reports probabilities with the number of simulations. Not for one game's win probability (see nhl-game-preview), current standings with no simulation (see nhl-team-analysis) or players (see nhl-player-scouting)."
 metadata:
   version: 2.0.0
   author: SportsDataHQ

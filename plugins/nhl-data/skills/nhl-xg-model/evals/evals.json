@@ -1,0 +1,56 @@
+{
+  "skill": "nhl-xg-model",
+  "tasks": [
+    {
+      "prompt": "Build me an expected goals model from NHL shots",
+      "expect": [
+        "get_shot_map and get_plays pulled by season",
+        "separate models per strength state",
+        "held-out seasons for evaluation",
+        "log loss and calibration reported"
+      ]
+    },
+    {
+      "prompt": "How do I flag rebounds and rush shots?",
+      "expect": [
+        "time and distance gaps from the previous shot",
+        "features defined with shift(1) discipline where needed",
+        "sample per strength state stated"
+      ]
+    },
+    {
+      "prompt": "Just tell me Toronto's xG for tonight",
+      "expect": [
+        "points at nhl-xg-report or the existing xG fields",
+        "does not train a model for a lookup",
+        "no invented values"
+      ]
+    }
+  ],
+  "triggers": {
+    "should": [
+      "score the quality of each shot with a model",
+      "train a model for chance of a shot becoming a goal",
+      "how do I model shot danger from coordinates",
+      "estimate probability a wrist shot from the slot scores",
+      "LightGBM for shot outcomes",
+      "create my own xGF% numbers",
+      "rebound detection from play by play",
+      "does a shot off the rush need its own feature",
+      "model shot value by strength state",
+      "compare my xG model against a logistic baseline"
+    ],
+    "should_not": [
+      "what does xG mean",
+      "how's Carolina's xGF%",
+      "goalie GSAX leaderboard",
+      "model who wins the game",
+      "Elo ratings for teams",
+      "preview tonight",
+      "tonight's lines",
+      "explain Corsi",
+      "who scored last night",
+      "build a totals model"
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "skill": "nhl-goalie-analysis",
+  "tasks": [
+    {
+      "prompt": "Is Shesterkin good this year?",
+      "expect": [
+        "get_goalie_stats with season",
+        "reports gsax and highDangerSavePct, not only save percentage",
+        "games played and starts stated"
+      ]
+    },
+    {
+      "prompt": "Does Hellebuyck get worse on the second night of a back-to-back?",
+      "expect": [
+        "restDays split from get_goalie_stats or get_game_detail",
+        "sample size for back-to-back starts",
+        "says not enough data if too few starts"
+      ]
+    },
+    {
+      "prompt": "Which goalie is most overrated by save percentage?",
+      "expect": [
+        "compares save percentage rank to gsax rank",
+        "minimum games threshold stated",
+        "no invented values"
+      ]
+    }
+  ],
+  "triggers": {
+    "should": [
+      "is Sorokin running hot",
+      "who's the best netminder right now",
+      "is Oettinger fatigued",
+      "how does Vasilevskiy do against Toronto",
+      "does the Kings tandem split starts evenly",
+      "goalie rankings once you account for shot quality",
+      "is Swayman overrated",
+      "who is the league's worst starter",
+      "how many starts has Lindgren had back to back",
+      "which keeper is stealing games for his team"
+    ],
+    "should_not": [
+      "Connor McDavid points per game",
+      "how good is Boston's defense",
+      "save prop for Hellebuyck tonight",
+      "build goalie features for my model",
+      "explain what GSAX stands for in baseball terms",
+      "Sabres standings",
+      "who wins the Vezina odds",
+      "xG against for Toronto as a team",
+      "tonight's starters",
+      "recommend a goalie to start in fantasy"
+    ]
+  }
+}

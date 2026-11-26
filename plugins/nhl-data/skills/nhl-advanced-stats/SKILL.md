@@ -1,6 +1,6 @@
 ---
 name: nhl-advanced-stats
-description: "Use when the user asks what Corsi, Fenwick, PDO, xG, high-danger chances, zone entries, RAPM or WAR mean, how to read a team's or player's advanced numbers, whether a team is lucky or unlucky, or what a stat tells you. Explains the metric and, when asked, pulls real numbers to show it. Not for odds or margin concepts (use odds-market-analysis), building an xG model (use nhl-xg-model), turning metrics into model features (use feature-engineering) or value decomposition (use nhl-war-gar)."
+description: "Use when the user asks what a hockey advanced stat means or whether it is skill or luck, in fan or analyst wording: 'what is PDO', 'explain Corsi', 'what does high danger mean', 'is shooting percentage luck', 'do bounces even out', 'is a team just getting lucky bounces', 'how do I read RAPM', 'what does zone entry data tell you', 'why does everyone say Fenwick'. Use this whenever a metric name, regression to the mean or how to interpret a number comes up. Load it for short fragments and follow-ups too, instead of answering from memory or going straight to the raw tools. Explains the metric, its limits and what it tells you, and pulls real numbers with sample sizes when asked. Not for checking one team's or game's results against its chances (see nhl-xg-report), building an xG model (see nhl-xg-model), odds terms (see odds-market-analysis) or value decomposition (see nhl-war-gar)."
 metadata:
   version: 2.0.0
   author: SportsDataHQ

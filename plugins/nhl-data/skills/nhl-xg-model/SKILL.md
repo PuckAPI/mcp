@@ -1,6 +1,6 @@
 ---
 name: nhl-xg-model
-description: "Use when the user asks to build an expected goals (xG) model, score shot quality, compute xGF% or xGA, detect rebounds or rush shots, or model the chance a shot becomes a goal. Trains XGBoost or LightGBM on shot events and locations from the PuckAPI MCP server (get_shot_map, get_plays). Not for using xG values that already exist (use nhl-team-analysis or nhl-advanced-stats). Not for game win models (use model-building). Not for goalie evaluation (use nhl-goalie-analysis)."
+description: "Use when the user wants to build or train their own hockey shot-quality model, in fan or analyst wording: 'train an xG model', 'score the quality of every shot', 'LightGBM on shot outcomes', 'how do I model shot danger from coordinates', 'make my own xGF%', 'detect rebounds and rush shots', 'chance a wrist shot from the slot scores', 'fit goal probability on shot events'. Use this whenever the task is fitting a model to shots rather than reading existing numbers. Load it for short fragments and follow-ups too, instead of going straight to the raw tools. Trains XGBoost or LightGBM on shot events and locations with a time-ordered split, and reports log loss and calibration. Not for existing xG numbers (see nhl-advanced-stats or nhl-xg-report), game win models (see model-building) or goalie evaluation (see nhl-goalie-analysis)."
 metadata:
   version: 2.0.0
   author: SportsDataHQ

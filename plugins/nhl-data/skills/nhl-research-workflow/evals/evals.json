@@ -1,0 +1,55 @@
+{
+  "skill": "nhl-research-workflow",
+  "tasks": [
+    {
+      "prompt": "I think teams on the second half of a back-to-back lose more. How do I test that?",
+      "expect": [
+        "frames a hypothesis test with a stated null",
+        "pulls games with get_games or get_schedule",
+        "sample size and interval reported, not a verdict from a handful of games"
+      ]
+    },
+    {
+      "prompt": "My game model is stuck at 58%, how do I improve it?",
+      "expect": [
+        "model iteration pattern: one change at a time",
+        "walk-forward evaluation, no random split",
+        "baseline comparison stated"
+      ]
+    },
+    {
+      "prompt": "Help me write up how my model did this month",
+      "expect": [
+        "performance report pattern",
+        "sample size and interval",
+        "no past result presented as a pick"
+      ]
+    }
+  ],
+  "triggers": {
+    "should": [
+      "where do I even start analyzing hockey data",
+      "how should I structure a session with Claude on NHL stats",
+      "I have a hunch about home teams after long road trips",
+      "my model plateaued, what next",
+      "how do I write up my model's results",
+      "walk me through exploring a new question",
+      "what's a good process for finding what drives goal differential",
+      "how do I test whether a trend is real or noise",
+      "organise a research day on the Hurricanes",
+      "what should I check before trusting a surprising result"
+    ],
+    "should_not": [
+      "who plays tonight",
+      "show games where the home team was outshot but won",
+      "engineer rolling features",
+      "train XGBoost on my data",
+      "tonight's odds",
+      "explain Elo",
+      "goalie rankings",
+      "score of last night's Leafs game",
+      "best fantasy pickups",
+      "how do I devig a line"
+    ]
+  }
+}
