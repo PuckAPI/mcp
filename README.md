@@ -176,6 +176,7 @@ Live coverage by season: [historical odds](https://puckapi.com/data/historical-o
 | **Starter** | 10,000 | $19/mo |
 | **Pro** | 30,000 | $49/mo |
 | **Scale** | 125,000 | $149/mo |
+| **Business** | 300,000 | $299/mo |
 
 Tools cost 1 to 25 credits a call ([per-tool costs](https://puckapi.com/pricing?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp)). Wallet top-ups from $5 never expire.
 
