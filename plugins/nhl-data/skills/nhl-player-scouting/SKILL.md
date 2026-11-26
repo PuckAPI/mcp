@@ -1,6 +1,6 @@
 ---
 name: nhl-player-scouting
-description: "Use when the user asks how an NHL player is playing, a player's points per game, a team's top scorers, to compare two skaters, how a prospect from another league translates to the NHL (NHLe), or wants stats for fantasy. Searches players and gives season stats, game logs, per-game rates and multi-season trends. Not for goalies (use nhl-goalie-analysis), team-level analysis (use nhl-team-analysis), WAR or GAR (use nhl-war-gar) or prop projections (use nhl-player-props-research)."
+description: "Use when the user asks how an NHL player is playing, a player's points per game, a team's top scorers, to compare two skaters, how a prospect from another league translates to the NHL (NHLe), or wants stats for fantasy. Searches players and gives season stats, game logs, per-game rates and multi-season trends. Not for goalies (use nhl-goalie-gsax-report), team-level standings or stats (call get_standings or get_team_stats), WAR or GAR (use nhl-war-gar) or prop projections (use nhl-player-props-research)."
 metadata:
   version: 2.1.0
   author: SportsDataHQ
@@ -10,7 +10,7 @@ metadata:
 
 > **Data:** the PuckAPI MCP server (`nhl-puckapi-tools`).
 > Tools: `search_players` (2 credits), `get_player_stats` (5), `get_skater_season_stats` (5, skater leaderboard), `get_player_game_log` (5, game-by-game lines).
-> For goalies use `nhl-goalie-analysis`. For the user's own player file, skip the tools and work with the file.
+> For goalies use `nhl-goalie-gsax-report`. For the user's own player file, skip the tools and work with the file.
 
 You are an expert at finding, reading and contextualizing skater data. Answer player questions accurately, compute per-game rates, compare players and evaluate prospects with NHLe, then route to deeper skills when needed.
 
@@ -34,8 +34,8 @@ You are an expert at finding, reading and contextualizing skater data. Answer pl
 
 ## When NOT to Use
 
-- Goalie save percentage, GAA, shutouts: see `nhl-goalie-analysis`
-- Team-level stats (GF/G, PP%, team rankings): see `nhl-team-analysis`
+- Goalie save percentage, GAA, shutouts: see `nhl-goalie-gsax-report`
+- Team-level stats (GF/G, PP%, team rankings): call `get_team_stats` or `get_standings`
 - Building WAR/GAR or composite value metrics: see `nhl-war-gar`
 - Projecting a player's prop line: see `nhl-player-props-research`
 
@@ -133,7 +133,7 @@ Under-18 prospects: multiply NHLe by 0.75 (penalize for age relative to competit
 **Important caveats:**
 - NHLe is a population average: individual variance is high
 - Defensive forwards and physical players are systematically undervalued by point-only NHLe
-- Goalie NHLe does not exist in point-based form; see `nhl-goalie-analysis`
+- Goalie NHLe does not exist in point-based form; see `nhl-goalie-gsax-report`
 - Always note sample size: fewer than 40 games creates wide confidence intervals
 
 ### Step 5: Build comparison tables
@@ -225,9 +225,9 @@ Sample note: [flag if < 40 GP]
 
 | What You Found | Next Action | Skill |
 |----------------|-------------|-------|
-| Found a strong player, want goalie on the same team | Check goalie stats separately | `nhl-goalie-analysis` |
+| Found a strong player, want goalie on the same team | Check goalie stats separately | `nhl-goalie-gsax-report` |
 | Want to build a player scoring model | Encode per-game rates as features | `feature-engineering` |
-| Prospect NHLe looks ready, want team context | Check where they'd fit on the roster | `nhl-team-analysis` |
+| Prospect NHLe looks ready, want team context | Check where they'd fit on the roster | `get_team_stats` |
 | Player stats for prop projections | Project player outcomes and compare with posted lines as information | `nhl-player-props-research` |
 | Want WAR or composite player value | Run full value decomposition | `nhl-war-gar` |
 | Found a player, want to preview a game they're in | Full game context | `nhl-game-preview` |

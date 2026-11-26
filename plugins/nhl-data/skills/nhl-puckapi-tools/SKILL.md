@@ -227,10 +227,10 @@ get_standings(conference="Eastern", season="20252026")
 | What You Retrieved | Next Action | Skill |
 |--------------------|-------------|-------|
 | Game results for a season | Compute Elo ratings or features | `elo-engineering` or `feature-engineering` |
-| Standings with Corsi/Fenwick | Analyze team performance | `nhl-team-analysis` |
+| Standings with Corsi/Fenwick | Analyze team performance | `get_standings`, `get_team_stats` |
 | Odds or market probabilities | See how our probability differs from the market's | `market-vs-model` |
 | Line movement data | Read implied and no-margin probability, movement and closing line | `odds-market-analysis` |
-| Player or goalie stats | Scout against the league | `nhl-player-scouting` or `nhl-goalie-analysis` |
+| Player or goalie stats | Scout against the league | `nhl-player-scouting` or `nhl-goalie-gsax-report` |
 | Head-to-head history | Build a game preview | `nhl-game-preview` |
 | Full season game log | Run a backtest | `backtesting` |
 | Raw game data, need features | Engineer model inputs | `feature-engineering` |

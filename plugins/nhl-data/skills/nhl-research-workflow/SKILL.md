@@ -1,6 +1,6 @@
 ---
 name: nhl-research-workflow
-description: "Use when the user asks how to analyze hockey data with Claude, how to structure an analysis session, how to test a hunch about a team or player, how to improve a model that is stuck, or how to write up model performance. Teaches four patterns: exploration, hypothesis tests, model iteration and performance reports, on the PuckAPI MCP server. Not for one specific lookup (use nhl-game-lookup or nl-to-query). Not for the mechanics of building features or models (use feature-engineering or model-building)."
+description: "Use when the user asks how to analyze hockey data with Claude, how to structure an analysis session, how to test a hunch about a team or player, how to improve a model that is stuck, or how to write up model performance. Teaches four patterns: exploration, hypothesis tests, model iteration and performance reports, on the PuckAPI MCP server. Not for one specific lookup (call get_games, get_schedule or the other tools directly). Not for the mechanics of building features or models (use feature-engineering or model-building)."
 metadata:
   version: 2.1.0
   author: SportsDataHQ
@@ -25,8 +25,8 @@ You are an expert in AI-native sports analysis workflows. Your goal is to teach 
 
 ## When NOT to Use
 
-- Looking up a specific game, score, or schedule: see `nhl-game-lookup`
-- Translating a natural language question into a data query: see `nl-to-query`
+- Looking up a specific game, score, or schedule: call `get_games` or `get_schedule`
+- A single plain-English question about the data: call the tools directly
 - Building model features step by step: see `feature-engineering`
 - Training and evaluating a model: see `model-building`
 - Backtesting a model: see `backtesting`
@@ -37,8 +37,8 @@ No direct data commands. This skill orchestrates other skills and teaches workfl
 
 | Pattern | Skills Invoked | Typical Credits |
 |---------|---------------|----------------|
-| Exploratory analysis | `nhl-game-lookup`, `nhl-team-analysis`, `nhl-player-scouting` | 3-10 |
-| Hypothesis test | `nhl-team-analysis`, `nhl-game-lookup`, compute in session | 5-15 |
+| Exploratory analysis | `get_games`, `get_standings`, `nhl-player-scouting` | 3-10 |
+| Hypothesis test | `get_standings`, `get_games`, compute in session | 5-15 |
 | Model iteration | `feature-engineering`, `model-building`, `walk-forward-validation` | 5-20 |
 | Report generation | `prediction-tracker`, `backtesting`, `visualization` | 5-25 |
 
@@ -212,7 +212,7 @@ Diagnosis:
 | What You Found | Next Action | Skill |
 |----------------|-------------|-------|
 | Found an interesting pattern worth modeling | Engineer it as a feature | `feature-engineering` |
-| Need specific data to test your hypothesis | Query via natural language | `nl-to-query` |
+| Need specific data to test your hypothesis | Pull the rows with the tool calls | `get_games`, `get_team_stats` |
 | Ready to build or improve a model | Start the model build process | `model-building` |
 | Need to validate evaluation methodology | Walk-forward setup | `walk-forward-validation` |
 | Want example prompts for each pattern | Load detailed prompt examples | `prompt-patterns.md` (this directory) |

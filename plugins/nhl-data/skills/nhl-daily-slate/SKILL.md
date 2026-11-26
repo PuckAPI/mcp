@@ -1,6 +1,6 @@
 ---
 name: nhl-daily-slate
-description: "Use when the user asks what is on tonight, wants the full NHL slate, every game today, a daily rundown, or which games the model sees differently from the market. Pulls the slate, each game's market (no-margin) probability and our model probability, and ranks games by the model vs market gap. Odds are information only: no stakes, picks or wagering advice. Not for one game in depth (use nhl-game-preview), a plain schedule or results lookup (use nhl-game-lookup), odds-only comparison (use nhl-odds-explorer) or historical testing (use backtesting)."
+description: "Use when the user asks what is on tonight, wants the full NHL slate, every game today, a daily rundown, or which games the model sees differently from the market. Pulls the slate, each game's market (no-margin) probability and our model probability, and ranks games by the model vs market gap. Odds are information only: no stakes, picks or wagering advice. Not for one game in depth (use nhl-game-preview), a plain schedule or results lookup (call get_games or get_schedule), odds-only comparison (use nhl-odds-explorer) or historical testing (use backtesting)."
 metadata:
   version: 2.1.0
   author: SportsDataHQ
@@ -22,7 +22,7 @@ You are a hockey analyst producing tonight's overview. Rank games by how far our
 ## When NOT to Use
 
 - One game in depth: use `nhl-game-preview`
-- Schedule or final scores only: use `nhl-game-lookup`
+- Schedule or final scores only: call `get_schedule` or `get_games`
 - Comparing books or line movement only: use `nhl-odds-explorer`
 - Historical testing of a model: use `backtesting`
 - Logging predictions and grading them later: use `prediction-tracker`

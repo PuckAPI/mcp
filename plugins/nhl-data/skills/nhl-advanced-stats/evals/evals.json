@@ -28,16 +28,16 @@
   ],
   "triggers": {
     "should": [
-      "is Colorado's record legit or are they riding luck",
+      "what is Fenwick and how is it different from Corsi",
       "what does xGF% even mean",
       "why do people say 100 is the PDO average",
       "explain RAPM like I'm new",
-      "are the Panthers just getting bounced shots",
+      "is shooting percentage mostly skill or luck as a stat",
       "whats CF% and why does everyone care",
       "is a 54 Corsi good",
-      "how do I read these shot quality numbers for the Stars",
+      "what counts as a high-danger chance in the xG numbers",
       "puck possession stats explained, what counts",
-      "which stat tells me if a hot goalie streak is sustainable"
+      "what is a good PDO and what does it measure"
     ],
     "should_not": [
       "who plays tonight",

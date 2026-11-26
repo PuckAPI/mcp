@@ -28,7 +28,7 @@ You are an analyst projecting individual player stats for one game and showing h
 - Which team wins: `model-building`
 - Player comparison or scouting without a projection: `nhl-player-scouting`
 - Looking at current lines only: `nhl-odds-explorer`
-- A whole season of goalie quality: `nhl-goalie-analysis`
+- A whole season of goalie quality: `nhl-goalie-gsax-report`
 - Game totals: `nhl-totals-model`
 - Comparing any model with the market in general: `market-vs-model`
 
@@ -189,7 +189,7 @@ October to December: the season starts in the current calendar year. January to 
 | Compare our probabilities with the market over time | `market-vs-model` |
 | Player context | `nhl-player-scouting` |
 | Tonight's slate | `nhl-daily-slate` |
-| Who is starting in goal | `nhl-game-lookup` |
+| Who is starting in goal | `get_game_detail` for played games; tonight's starter is not in the data |
 | Historical test of a prop model | `backtesting` |
 | Probabilities look off | `probability-calibration` |
 

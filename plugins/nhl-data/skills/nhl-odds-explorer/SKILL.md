@@ -26,7 +26,7 @@ You are an expert in how betting markets price hockey. Show what the books are p
 
 - Devigging methods, closing-line comparison or calibration of prices: `odds-market-analysis`
 - Comparing a model's probability with the market: `market-vs-model`
-- Results and schedules: `nhl-game-lookup`
+- Results and schedules: `get_games` and `get_schedule`
 - Historical odds for testing: `backtesting`
 
 ## Tools

@@ -23,20 +23,36 @@
         "says announced starters are not in the data",
         "offers get_game_detail for played games"
       ]
+    },
+    {
+      "prompt": "Does Hellebuyck get worse on the second night of a back-to-back?",
+      "expect": [
+        "restDays split from get_goalie_stats or get_game_detail",
+        "sample size for back-to-back starts",
+        "says not enough data if too few starts"
+      ]
+    },
+    {
+      "prompt": "Which goalie is most overrated by save percentage?",
+      "expect": [
+        "compares save percentage rank to gsax rank",
+        "minimum games threshold stated",
+        "no invented values"
+      ]
     }
   ],
   "triggers": {
     "should": [
       "is he a good goalie or just well defended",
       "who has the best GSAX",
-      "goalie leaderboard by goals saved above expected",
       "is his save percentage sustainable",
       "high-danger save percentage for Shesterkin",
       "is the goalie slumping",
-      "rolling GSAX for Hellebuyck",
-      "worst goalies by goals saved above expected",
-      "who is overperforming in net",
-      "did the Sabres goalie steal that game"
+      "is Sorokin running hot",
+      "is Swayman overrated",
+      "is Oettinger fatigued",
+      "does the Kings tandem split starts evenly",
+      "which keeper is stealing games for his team"
     ],
     "should_not": [
       "preview Bruins vs Leafs",
@@ -44,11 +60,11 @@
       "build an xG model",
       "goalie props for tonight",
       "team Corsi for the Oilers",
-      "shot map for McDavid",
       "best skater by points",
       "standings in the Atlantic",
       "explain what GSAX means in general",
-      "goalie stats for the PWHL champion"
+      "recommend a goalie to start in fantasy",
+      "xG against for Toronto as a team"
     ]
   }
 }

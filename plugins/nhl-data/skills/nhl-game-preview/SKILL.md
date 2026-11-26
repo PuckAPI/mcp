@@ -1,6 +1,6 @@
 ---
 name: nhl-game-preview
-description: "Use when the user wants to know how one NHL game shapes up, in fan or analyst wording: 'Sabres vs Leafs tonight', 'who wins Oilers Stars', 'breakdown of the Rangers game', 'who is in goal', 'how do these two teams compare', 'what should I know about tonight's game', 'preview the Panthers game', 'is the favorite live'. Use this whenever two NHL teams are named together for one game. Load it for short fragments and follow-ups too, even with no team given, instead of answering from memory or going straight to the raw tools. Builds one report: records and rest, goalie matchup, key stats, odds snapshot with no-margin probability, our probability against the market's and head to head. Odds are information only. Not for the whole slate (see nhl-daily-slate), odds only (see nhl-odds-explorer), past results (see nhl-game-lookup) or modeling."
+description: "Use when the user wants to know how one NHL game shapes up, in fan or analyst wording: 'Sabres vs Leafs tonight', 'who wins Oilers Stars', 'breakdown of the Rangers game', 'who is in goal', 'how do these two teams compare', 'what should I know about tonight's game', 'preview the Panthers game', 'is the favorite live'. Use this whenever two NHL teams are named together for one game. Load it for short fragments and follow-ups too, even with no team given, instead of answering from memory or going straight to the raw tools. Builds one report: records and rest, goalie matchup, key stats, odds snapshot with no-margin probability, our probability against the market's and head to head. Odds are information only. Not for the whole slate (see nhl-daily-slate), odds only (see nhl-odds-explorer), past results (call get_games) or modeling."
 metadata:
   version: 2.1.0
   author: SportsDataHQ
@@ -23,8 +23,8 @@ You are a hockey analyst producing one complete, shareable pre-game report. Odds
 
 - All games tonight: `nhl-daily-slate`
 - Odds only: `nhl-odds-explorer`
-- Deep goalie stats: `nhl-goalie-analysis`
-- Deep team stats: `nhl-team-analysis`
+- Deep goalie stats: `nhl-goalie-gsax-report`
+- Deep team stats or standings: call `get_team_stats` or `get_standings`
 - Building a model: `model-building`; comparing a model with the market: `market-vs-model`
 
 ## Tools
@@ -66,6 +66,7 @@ October to December: the season starts in the current calendar year. January to 
 Pull the data in parallel where you can, then write six sections.
 
 1. **Matchup context.** `get_standings` for both teams: record (W-L-OTL), points percentage, division and conference rank, last-10 form if returned. `get_schedule` for rest days and back-to-back.
+   Schedule strength, when asked how hard a team's run has been: there is no strength-of-schedule tool, so average the opponents' `pointPct` from `get_standings` over the games in question and say it is a rough estimate. Past and remaining schedule strength can differ a lot mid-season.
 2. **Goalie matchup.** `get_goalie_stats` for each team's likely starter: GP, GS, record, save percentage, GAA, GSAX if returned. Do not name tonight's starter unless a tool confirms it.
 3. **Key stats.** `get_team_stats` for both teams: Corsi%, Fenwick%, goals for and against per game, expected goals for and against, goal differential, points percentage. Flag any gap that is large compared with the league spread.
 4. **Odds snapshot.** `get_odds` and `get_game_probabilities`: moneyline, puck line and total, plus the market's fair (no-margin) probability for each side. If books differ by more than 5 cents on a moneyline, mention the disagreement as a fact about the market.
@@ -125,8 +126,8 @@ Sources: [list of tool calls]
 |------|-------|
 | The whole slate | `nhl-daily-slate` |
 | Test a model against the market | `market-vs-model` |
-| Goalie depth | `nhl-goalie-analysis` |
-| Team depth | `nhl-team-analysis` |
+| Goalie depth | `nhl-goalie-gsax-report` |
+| Team depth | `get_team_stats`, `get_standings` |
 | Log our probability and grade it later | `prediction-tracker` |
 | Chart it | `visualization` |
 

@@ -1,6 +1,6 @@
 ---
 name: nhl-playoff-simulation
-description: "Use when the user asks about NHL playoff, seeding or Cup chances, in fan or analyst wording: 'will the Wings make the playoffs', 'Cup odds for Colorado', 'who finishes first in the division', 'how likely is a wild card spot', 'can they catch Boston', 'simulate the rest of the season', 'run the season ten thousand times', 'bracket simulation', 'who lifts the Cup'. Use this whenever a team's path, seed, division finish or title chance is the subject. Load it for short fragments and follow-ups too, instead of answering from memory or going straight to the raw tools. Runs a Monte Carlo season and playoff simulation on standings and schedule and reports probabilities with the number of simulations. Not for one game's win probability (see nhl-game-preview), current standings with no simulation (see nhl-team-analysis) or players (see nhl-player-scouting)."
+description: "Use when the user asks about NHL playoff, seeding or Cup chances, in fan or analyst wording: 'will the Wings make the playoffs', 'Cup odds for Colorado', 'who finishes first in the division', 'how likely is a wild card spot', 'can they catch Boston', 'simulate the rest of the season', 'run the season ten thousand times', 'bracket simulation', 'who lifts the Cup'. Use this whenever a team's path, seed, division finish or title chance is the subject. Load it for short fragments and follow-ups too, instead of answering from memory or going straight to the raw tools. Runs a Monte Carlo season and playoff simulation on standings and schedule and reports probabilities with the number of simulations. Not for one game's win probability (see nhl-game-preview), current standings with no simulation (call get_standings) or players (see nhl-player-scouting)."
 metadata:
   version: 2.1.0
   author: SportsDataHQ
@@ -27,7 +27,7 @@ You are an expert in Monte Carlo season and playoff simulation. Your goal is to 
 ## When NOT to Use
 
 - Single game win probability: see `model-building` or `nhl-game-preview`
-- Team evaluation without simulation context: see `nhl-team-analysis`
+- Team evaluation without simulation context: call `get_standings` or `get_team_stats`
 - Player-level analysis or valuation: see `nhl-player-scouting`
 - Running Elo ratings from scratch: see `elo-engineering` first, then bring ratings here
 

@@ -1,6 +1,6 @@
 ---
 name: nhl-xg-model
-description: "Use when the user wants to build or train their own hockey shot-quality model, in fan or analyst wording: 'train an xG model', 'score the quality of every shot', 'LightGBM on shot outcomes', 'how do I model shot danger from coordinates', 'make my own xGF%', 'detect rebounds and rush shots', 'chance a wrist shot from the slot scores', 'fit goal probability on shot events'. Use this whenever the task is fitting a model to shots rather than reading existing numbers. Load it for short fragments and follow-ups too, instead of going straight to the raw tools. Trains XGBoost or LightGBM on shot events and locations with a time-ordered split, and reports log loss and calibration. Not for existing xG numbers (see nhl-advanced-stats or nhl-xg-report), game win models (see model-building) or goalie evaluation (see nhl-goalie-analysis)."
+description: "Use when the user wants to build or train their own hockey shot-quality model, in fan or analyst wording: 'train an xG model', 'score the quality of every shot', 'LightGBM on shot outcomes', 'how do I model shot danger from coordinates', 'make my own xGF%', 'detect rebounds and rush shots', 'chance a wrist shot from the slot scores', 'fit goal probability on shot events'. Use this whenever the task is fitting a model to shots rather than reading existing numbers. Load it for short fragments and follow-ups too, instead of going straight to the raw tools. Trains XGBoost or LightGBM on shot events and locations with a time-ordered split, and reports log loss and calibration. Not for existing xG numbers (see nhl-advanced-stats or nhl-xg-report), game win models (see model-building) or goalie evaluation (see nhl-goalie-gsax-report)."
 metadata:
   version: 2.1.0
   author: SportsDataHQ
@@ -30,9 +30,9 @@ You are an expert in hockey expected goals modeling. Your goal is to build a sho
 
 ## When NOT to Use
 
-- Using xG values that already exist: to analyze teams with pre-built xG, see `nhl-team-analysis` or `nhl-advanced-stats`
+- Using xG values that already exist: to analyze teams with pre-built xG, see `nhl-xg-report` or `nhl-advanced-stats`
 - Predicting game outcomes (win/loss): see `model-building`
-- Evaluating goalie quality using xGA: see `nhl-goalie-analysis`
+- Evaluating goalie quality using xGA: see `nhl-goalie-gsax-report`
 - General feature engineering for non-xG features: see `feature-engineering`
 
 ## Data Sources
@@ -225,7 +225,7 @@ The xG model produces:
 
 1. **Shot-level xG values**: DataFrame with `game_id`, `event_id`, `shooter_id`, `team`, `strength_state`, `xg` (float 0-1), and all computed features.
 2. **Team-game xG aggregates**: `xGF` and `xGA` per team per game per strength state.
-3. **Season xGF%** (5v5): one value per team, used as input to `nhl-team-analysis` or `feature-engineering`.
+3. **Season xGF%** (5v5): one value per team, used as input to `nhl-xg-report` or `feature-engineering`.
 4. **Model artifacts**: serialized XGBoost models per strength state (`.pkl` or `.json`), feature names, and Brier score per strength state.
 5. **Calibration report**: predicted vs actual goal rate by decile for each strength state model.
 
@@ -234,8 +234,8 @@ The xG model produces:
 | What You Found | Next Action | Skill |
 |----------------|-------------|-------|
 | xG model built, want to use it as a prediction model feature | Add xGF% as a lag feature | `feature-engineering` |
-| Team xGF% computed, want to analyze team quality | Use xGF% alongside Corsi and PDO | `nhl-team-analysis` |
-| Goalie xGA computed, want to evaluate goalie quality | xGA is the input to GSAA calculation | `nhl-goalie-analysis` |
+| Team xGF% computed, want to analyze team quality | Use xGF% alongside Corsi and PDO | `nhl-xg-report` |
+| Goalie xGA computed, want to evaluate goalie quality | xGA is the input to GSAA calculation | `nhl-goalie-gsax-report` |
 | Model is built, want to compare with the market | How the xG-implied win probability differs from the market probability | `market-vs-model` |
 | Want to validate the model with proper temporal splits | Hold out full seasons for out-of-sample testing | `walk-forward-validation` |
 | Calibration curve is off | Recalibrate probabilities with isotonic regression or Platt scaling | `probability-calibration` |

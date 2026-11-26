@@ -1,6 +1,6 @@
 ---
 name: nhl-war-gar
-description: "Use when the user asks how valuable an NHL skater really is, in fan or analyst wording: 'who is the most valuable skater', 'McDavid WAR', 'is he underrated by the box score', 'what is his impact without his linemates', 'value over a replacement winger', 'is his contract worth it', 'who drives results with or without his partner', 'RAPM for Hamilton'. Use this whenever a skater's true impact, WAR, GAR or value over replacement is the subject. Load it for short fragments and follow-ups too, instead of answering from memory or going straight to the raw tools. Builds RAPM from shifts and plays and gives a player card with component breakdown and sample sizes. Not for plain stat lookups (see nhl-player-scouting), goalies (see nhl-goalie-analysis), team form (see nhl-team-analysis) or game prediction (see model-building)."
+description: "Use when the user asks how valuable an NHL skater really is, in fan or analyst wording: 'who is the most valuable skater', 'McDavid WAR', 'is he underrated by the box score', 'what is his impact without his linemates', 'value over a replacement winger', 'is his contract worth it', 'who drives results with or without his partner', 'RAPM for Hamilton'. Use this whenever a skater's true impact, WAR, GAR or value over replacement is the subject. Load it for short fragments and follow-ups too, instead of answering from memory or going straight to the raw tools. Builds RAPM from shifts and plays and gives a player card with component breakdown and sample sizes. Not for plain stat lookups (see nhl-player-scouting), goalies (see nhl-goalie-gsax-report), team form (call get_team_stats) or game prediction (see model-building)."
 metadata:
   version: 2.1.0
   author: SportsDataHQ
@@ -26,8 +26,8 @@ You are an expert in advanced hockey player evaluation. Your goal is to compute 
 ## When NOT to Use
 
 - Simple player stats lookup without modeling: see `nhl-player-scouting`
-- Goalie evaluation: goalies use GSAA (Goals Saved Above Average), not WAR. See `nhl-goalie-analysis`
-- Team-level performance and standings analysis: see `nhl-team-analysis`
+- Goalie evaluation: goalies use GSAA (Goals Saved Above Average), not WAR. See `nhl-goalie-gsax-report`
+- Team-level performance and standings analysis: call `get_standings` or `get_team_stats`
 - Game prediction (WAR is a player evaluation metric, not a game prediction feature directly): see `model-building` or `feature-engineering`
 
 ## Commands Available
@@ -278,7 +278,7 @@ See `visualization` skill for full chart template.
 | "Use raw goals as the RAPM target" | Goals are too sparse per shift; extreme variance drowns signal | Use xG per 60 as the target; map to goals via xG-to-goals calibration |
 | "WAR is additive with teammates" | WAR is not a linear decomposition of team wins; two 4-WAR players don't guarantee 8 wins of value together | WAR estimates individual marginal contribution; team synergies are separate |
 | "Contract surplus is straightforward at age 35" | Aging curve means past WAR is a poor predictor of future WAR for players 32+ | Apply aging curve adjustment; note the uncertainty explicitly |
-| "Goalies should have WAR too" | RAPM was designed for skaters; goalie performance is better captured by GSAA | For goalies, use GSAA; see `nhl-goalie-analysis` |
+| "Goalies should have WAR too" | RAPM was designed for skaters; goalie performance is better captured by GSAA | For goalies, use GSAA; see `nhl-goalie-gsax-report` |
 
 ## Output Format
 
@@ -297,7 +297,7 @@ The WAR/GAR model produces:
 | WAR computed, want contract surplus analysis | Use WAR * market rate vs AAV | Stay in this skill (Step 5) |
 | Component breakdown ready, want radar chart | Render component radar card | `visualization` |
 | Want to use WAR as a model feature for game prediction | Treat WAR as a team-level sum feature (sum of skater WARs) | `feature-engineering` |
-| Need to evaluate goalie value separately | Goalies use GSAA, not WAR | `nhl-goalie-analysis` |
+| Need to evaluate goalie value separately | Goalies use GSAA, not WAR | `nhl-goalie-gsax-report` |
 | Want to compare players for trade analysis | Use surplus value + component breakdown | `nhl-player-scouting` |
 | RAPM estimates look noisy | Check sample size per player; increase regularization or add seasons | `walk-forward-validation` for stability check |
 

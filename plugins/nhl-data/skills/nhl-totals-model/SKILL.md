@@ -29,7 +29,7 @@ You are an expert in hockey over/under prediction. Your goal is to build a calib
 - Spread / puck-line prediction: see `model-building` (totals and spreads share some features but are separate models)
 - Player-level goal/point props: see `nhl-player-props-research`
 - Exploring current odds lines without modeling: see `nhl-odds-explorer`
-- Analyzing team offensive/defensive quality in isolation: see `nhl-team-analysis`
+- Analyzing team offensive/defensive quality in isolation: call `get_team_stats`
 
 ## Commands Available
 
