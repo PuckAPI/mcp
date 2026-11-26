@@ -2,7 +2,7 @@
 name: nhl-player-props-research
 description: "Use when the user asks about an NHL player's prop line or stat for a game, in fan or analyst wording: 'MacKinnon shots line', 'will Draisaitl score tonight', 'Kucherov points number', 'does he go over his assists line', 'how has his points line moved', 'how often does he cash the over', 'saves total for Shesterkin', 'anytime goal chances for Ovi', 'who is likely to score tonight'. Use this whenever a hockey player is mentioned with a line, over or under, or shots, goals, assists, points or saves for a game. Load it for short fragments and follow-ups too, even with no name given, instead of answering from memory or going straight to the raw tools. Shows lines by sportsbook, the player's record against his line with sample size, movement, our projection and the no-margin market probability. Never says which side to take. Not for game totals (see nhl-totals-model), game odds (see nhl-odds-explorer), scouting (see nhl-player-scouting) or building a model."
 metadata:
-  version: 2.1.0
+  version: 2.2.0
   author: SportsDataHQ
 ---
 

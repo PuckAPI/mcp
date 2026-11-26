@@ -2,7 +2,7 @@
 name: nhl-totals-model
 description: "Use when the user asks how many goals an NHL game will have, in fan or analyst wording: 'will tonight go over 6', 'total goals for Stars Avs', 'is this a low-scoring matchup', 'does the goalie matchup change scoring', 'do tired teams score more', 'chance it ends 5-4 or higher', 'scoring pace for the Bruins', 'model the over under'. Use this whenever a game's total goals or scoring level is the subject. Load it for short fragments and follow-ups too, instead of answering from memory or going straight to the raw tools. Builds a calibrated total-goals distribution and shows the gap to the market total as a probability, with sample sizes. Odds are information only. Not for who wins or the puck line (see model-building), player props (see nhl-player-props-research), current prices only (see nhl-odds-explorer) or explaining what a total is."
 metadata:
-  version: 2.1.0
+  version: 2.2.0
   author: SportsDataHQ
 ---
 

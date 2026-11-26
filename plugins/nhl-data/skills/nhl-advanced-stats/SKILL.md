@@ -2,7 +2,7 @@
 name: nhl-advanced-stats
 description: "Use when the user asks what a hockey advanced stat means or how to read it, in fan or analyst wording: 'what is PDO', 'explain Corsi', 'what does high danger mean', 'what is Fenwick', 'how do I read RAPM', 'what does zone entry data tell you', 'what is the difference between xG and Corsi', 'what is a good Corsi percentage', 'how stable is shooting percentage'. Use this whenever a metric name, its definition or how to interpret a number comes up. Load it for short fragments and follow-ups too, instead of answering from memory or going straight to the raw tools. Explains the metric, its limits and what it tells you, and pulls real numbers with sample sizes when asked. Not for whether a team is lucky or deserved a result, or got outshot but won (see nhl-xg-report), building an xG model (see nhl-xg-model), odds terms (see odds-market-analysis) or value decomposition (see nhl-war-gar)."
 metadata:
-  version: 2.1.0
+  version: 2.2.0
   author: SportsDataHQ
 ---
 

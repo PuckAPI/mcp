@@ -2,7 +2,7 @@
 name: nhl-game-preview
 description: "Use when the user wants to know how one NHL game shapes up, in fan or analyst wording: 'Sabres vs Leafs tonight', 'who wins Oilers Stars', 'breakdown of the Rangers game', 'who is in goal', 'how do these two teams compare', 'what should I know about tonight's game', 'preview the Panthers game', 'is the favorite live'. Use this whenever two NHL teams are named together for one game. Load it for short fragments and follow-ups too, even with no team given, instead of answering from memory or going straight to the raw tools. Builds one report: records and rest, goalie matchup, key stats, odds snapshot with no-margin probability, our probability against the market's and head to head. Odds are information only. Not for the whole slate (see nhl-daily-slate), odds only (see nhl-odds-explorer), past results (call get_games) or modeling."
 metadata:
-  version: 2.1.0
+  version: 2.2.0
   author: SportsDataHQ
 ---
 
