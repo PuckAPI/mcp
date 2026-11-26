@@ -217,3 +217,7 @@ Diagnosis:
 | Need to validate evaluation methodology | Walk-forward setup | `walk-forward-validation` |
 | Want example prompts for each pattern | Load detailed prompt examples | `prompt-patterns.md` (this directory) |
 | Want a structured slate summary | Run the daily slate workflow | `nhl-daily-slate` |
+
+## Credits
+
+- Out of credits: if a call is refused for credits, pass on the API's message as it comes (it says when free credits refill and how to add more), and stop; don't retry or switch tools to get around it.

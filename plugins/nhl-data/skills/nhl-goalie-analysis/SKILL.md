@@ -17,7 +17,7 @@ You are an expert in NHL goaltending evaluation. Surface the metrics that predic
 
 - Call the tools. Never answer from memory.
 - Cite which tool call produced each number.
-- State the sample size (games played) and the season convention (the tools name an NHL season by the year it starts).
+- State the sample size (games played) and the season convention (the tools take an 8-digit season id, 20252026 for 2025-26).
 - If the sample is too small or data is missing, say "not enough data" instead of guessing.
 
 ## When to Use
@@ -56,7 +56,7 @@ You are an expert in NHL goaltending evaluation. Surface the metrics that predic
 ## Season Resolution
 
 - October through December: current calendar year is the season start (2026-27 season)
-- January through September: previous calendar year is the season start (2025-26 season)
+- January through September: previous calendar year is the season start (2025-26 is 20252026)
 - "This season" = season currently in progress or most recently completed
 - "Last season" = one season before "this season"
 - NHL regular season: October to April. Playoffs: April to June.
@@ -175,3 +175,7 @@ vs. [Opponent] (if requested): X-X-X | .XXX SV% | X.XX GAA (N GP)
 | Evaluating a trade or roster move | Value decomposition with WAR/GAR | `nhl-war-gar` |
 | Goalie diverges heavily from xSV% | Dig into shot quality allowed by defense | `nhl-team-analysis` |
 | Goalie saves projection and lines | See how our projection sits against the posted line | `nhl-player-props-research` |
+
+## Credits
+
+- Out of credits: if a call is refused for credits, pass on the API's message as it comes (it says when free credits refill and how to add more), and stop; don't retry or switch tools to get around it.

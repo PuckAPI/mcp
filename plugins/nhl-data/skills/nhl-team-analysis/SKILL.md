@@ -53,8 +53,8 @@ You are an expert at evaluating teams in context: standings, performance metrics
 
 ## Season Resolution
 
-- October through December: current calendar year is the season start (2025-26 season)
-- January through September: previous calendar year is the season start (2025-26 season, referenced as 2025)
+- October through December: current calendar year is the season start (2025-26 is 20252026)
+- January through September: previous calendar year is the season start (2025-26 is 20252026)
 - "This season" = season currently in progress or most recently completed
 - "Last season" = one full season prior
 - NHL regular season: October to April. Playoffs: April to June.
@@ -194,3 +194,7 @@ xGA         N           N
 | Want to know key players driving the stats | Break down by player | `nhl-player-scouting` |
 | Want goalie stats contributing to GA/G | Goalie-specific analysis | `nhl-goalie-analysis` |
 | Want to see how our team rating differs from the market price | Model vs market gap | `market-vs-model` |
+
+## Credits
+
+- Out of credits: if a call is refused for credits, pass on the API's message as it comes (it says when free credits refill and how to add more), and stop; don't retry or switch tools to get around it.

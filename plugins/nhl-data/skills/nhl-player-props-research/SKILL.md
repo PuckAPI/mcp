@@ -55,7 +55,7 @@ Not available: lineup and power-play unit assignments, confirmed starting goalie
 
 - Call the tools. Never answer from memory.
 - Cite which tool call produced each number.
-- State the sample size (games in the window) and the season convention (the tools name an NHL season by the year it starts).
+- State the sample size (games in the window) and the season convention (the tools take an 8-digit season id, 20252026 for 2025-26).
 - If a player has too few games, or a starter is unconfirmed for a saves prop, write "not enough data" and give no number.
 - A projection is an estimate with a range, not a fact.
 
@@ -180,3 +180,7 @@ October to December: the season starts in the current calendar year. January to 
 | Who is starting in goal | `nhl-game-lookup` |
 | Historical test of a prop model | `backtesting` |
 | Probabilities look off | `probability-calibration` |
+
+## Credits
+
+- Out of credits: if a call is refused for credits, pass on the API's message as it comes (it says when free credits refill and how to add more), and stop; don't retry or switch tools to get around it.

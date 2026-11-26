@@ -46,7 +46,7 @@ Not available: public betting percentages and live in-game odds. Odds and props 
 
 - Call the tools. Never answer from memory.
 - Cite which tool call produced each price or probability.
-- State how many books are in the comparison, the capture time of the lines and the season convention (the tools name an NHL season by the year it starts).
+- State how many books are in the comparison, the capture time of the lines and the season convention (the tools take an 8-digit season id, 20252026 for 2025-26).
 - If a market has too few books or no lines, write "not enough data" instead of guessing.
 
 ## How It Works
@@ -116,3 +116,7 @@ Sources: get_odds, get_game_probabilities[, get_line_movement]
 | Compare our probability with the market's | `market-vs-model` |
 | Full game context | `nhl-game-preview` |
 | The whole slate | `nhl-daily-slate` |
+
+## Credits
+
+- Out of credits: if a call is refused for credits, pass on the API's message as it comes (it says when free credits refill and how to add more), and stop; don't retry or switch tools to get around it.

@@ -220,7 +220,7 @@ For totals, the key metric is **RMSE on total goals** and **calibrated Brier sco
 ## Season Resolution
 
 - October through December: current calendar year is the season start (2026-27 season)
-- January through September: previous calendar year is the season start (2025-26 season)
+- January through September: previous calendar year is the season start (2025-26 is 20252026)
 - "This season" = season currently in progress or most recently completed
 - NHL regular season: October to April. Playoffs: April to June.
 
@@ -272,3 +272,7 @@ The totals model produces:
 | Calibration is off | Recalibrate using isotonic regression | `probability-calibration` |
 | Want to backtest the totals model | Score predictions by season with sample sizes and intervals | `backtesting` |
 | Suspect under bias is real: want to validate | Test the pattern in walk-forward | `walk-forward-validation` |
+
+## Credits
+
+- Out of credits: if a call is refused for credits, pass on the API's message as it comes (it says when free credits refill and how to add more), and stop; don't retry or switch tools to get around it.

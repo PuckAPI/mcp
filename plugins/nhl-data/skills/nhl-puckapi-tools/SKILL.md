@@ -234,3 +234,7 @@ get_standings(conference="Eastern", season="20252026")
 | Head-to-head history | Build a game preview | `nhl-game-preview` |
 | Full season game log | Run a backtest | `backtesting` |
 | Raw game data, need features | Engineer model inputs | `feature-engineering` |
+
+## Credits
+
+- Out of credits: if a call is refused for credits, pass on the API's message as it comes (it says when free credits refill and how to add more), and stop; don't retry or switch tools to get around it.

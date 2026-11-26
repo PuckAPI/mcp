@@ -18,7 +18,7 @@ You are an expert hockey analyst. Teach what advanced metrics mean, show how to 
 
 - When you quote a team or player value, call the tool. Never answer from memory.
 - Cite which tool call produced each number.
-- State the sample size (games or minutes) and the season convention (the tools name an NHL season by the year it starts; say which one you used).
+- State the sample size (games or minutes) and the season convention (the tools take an 8-digit season id, 20252026 for 2025-26; say which one you used).
 - If the data is missing or the sample is small (under about 20 games), say "not enough data" or flag it clearly instead of guessing.
 
 ## When to Use
@@ -172,7 +172,7 @@ Translation: For every 100 shot attempts in a 5v5 game, Buffalo generates 48 and
 Context: This ranks 22nd in the league. They're being outshot, but their PDO is 1.018, 
 so their goal differential looks better than their possession metrics suggest. 
 Expect regression if PDO normalizes.
-Sources: get_team_stats (BUF, 2025 season, 62 games).
+Sources: get_team_stats (BUF, 20252026 season, 62 games).
 ```
 
 ## What to Do Next
@@ -184,3 +184,7 @@ Sources: get_team_stats (BUF, 2025 season, 62 games).
 | Ready to engineer features for a prediction model | Convert metrics into model-ready features | `feature-engineering` |
 | Want WAR/GAR component breakdown | Deep dive into value decomposition | `nhl-war-gar` |
 | Want metric formulas and stabilization rates | Read the full reference | `metrics-reference.md` (this directory) |
+
+## Credits
+
+- Out of credits: if a call is refused for credits, pass on the API's message as it comes (it says when free credits refill and how to add more), and stop; don't retry or switch tools to get around it.

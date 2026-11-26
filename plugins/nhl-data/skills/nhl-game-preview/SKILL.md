@@ -46,7 +46,7 @@ Not available: a ready-made preview, a pregame starter confirmation, an injury r
 
 - Call the tools. Never answer from memory.
 - Cite which tool call produced each number.
-- State the sample size (games played, number of head-to-head meetings) and the season convention (the tools name an NHL season by the year it starts; say which season you used).
+- State the sample size (games played, number of head-to-head meetings) and the season convention (the tools take an 8-digit season id, 20252026 for 2025-26; say which season you used).
 - If data is missing or the sample is too small, write "not enough data" instead of guessing.
 
 ## Season
@@ -121,3 +121,7 @@ Sources: [list of tool calls]
 | Team depth | `nhl-team-analysis` |
 | Log our probability and grade it later | `prediction-tracker` |
 | Chart it | `visualization` |
+
+## Credits
+
+- Out of credits: if a call is refused for credits, pass on the API's message as it comes (it says when free credits refill and how to add more), and stop; don't retry or switch tools to get around it.

@@ -45,7 +45,7 @@ Tools that do not exist: a daily card endpoint, a batch odds endpoint, an injury
 
 - Call the tools. Never answer from memory.
 - Cite which tool call produced each number (for example "market probability: get_game_probabilities, BUF @ TOR").
-- State the sample size behind any rate or record, and the season convention (the tools name an NHL season by the year it starts; say which season you used).
+- State the sample size behind any rate or record, and the season convention (the tools take an 8-digit season id, 20252026 for 2025-26; say which season you used).
 - If a tool returns nothing or too few games, write "not enough data" instead of guessing.
 
 ## Season and dates
@@ -144,3 +144,7 @@ Gaps compare our probability with the market's. They are information, not advice
 | Check our probabilities are calibrated | `probability-calibration` |
 | Chart the slate | `visualization` |
 | Build or improve the model | `model-building` |
+
+## Credits
+
+- Out of credits: if a call is refused for credits, pass on the API's message as it comes (it says when free credits refill and how to add more), and stop; don't retry or switch tools to get around it.

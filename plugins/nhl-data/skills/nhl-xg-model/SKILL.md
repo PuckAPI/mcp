@@ -184,7 +184,7 @@ team_xgf_pct = xg_5v5 / (xg_5v5.groupby('game_id').transform('sum'))
 ## Season Resolution
 
 - October through December: current calendar year is the season start (e.g., 2026-27 season)
-- January through September: previous calendar year is the season start (e.g., 2025-26 season)
+- January through September: previous calendar year is the season start (e.g., 2025-26 is 20252026)
 - "This season" = season currently in progress or most recently completed
 - NHL regular season: October to April. Playoffs: April to June.
 
@@ -239,3 +239,7 @@ The xG model produces:
 | Model is built, want to compare with the market | How the xG-implied win probability differs from the market probability | `market-vs-model` |
 | Want to validate the model with proper temporal splits | Hold out full seasons for out-of-sample testing | `walk-forward-validation` |
 | Calibration curve is off | Recalibrate probabilities with isotonic regression or Platt scaling | `probability-calibration` |
+
+## Credits
+
+- Out of credits: if a call is refused for credits, pass on the API's message as it comes (it says when free credits refill and how to add more), and stop; don't retry or switch tools to get around it.

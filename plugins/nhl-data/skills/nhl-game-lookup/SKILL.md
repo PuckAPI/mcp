@@ -18,7 +18,7 @@ You are an expert at finding game data. Answer schedule and results questions qu
 
 - Call the tools. Never answer from memory.
 - Cite which tool call produced each score, record or date.
-- State the sample size for any head-to-head record (number of games and the seasons covered) and the season convention (the tools name an NHL season by the year it starts).
+- State the sample size for any head-to-head record (number of games and the seasons covered) and the season convention (the tools take an 8-digit season id, 20252026 for 2025-26).
 - If nothing is returned, say "not enough data" or "no games found" and say what you queried. Do not guess a score.
 
 ## When to Use
@@ -52,15 +52,15 @@ You are an expert at finding game data. Answer schedule and results questions qu
 | Not Available | Use Instead |
 |--------------|-------------|
 | `get_live_scores` | Use `get_games` with today's date; status field indicates live/final |
-| `get_playoffs_bracket` | Use `get_games` filtered by `game_type=playoffs` |
+| `get_playoffs_bracket` | Use `get_games` filtered by `game_type=playoff` |
 | `get_game_recap` | Use `get_game_detail` for box score; narratives are not available |
 | `get_injuries` | Not available in this tool |
 | `get_lineup` | Not available in this tool |
 
 ## Season Resolution
 
-- October through December: current calendar year is the season start (2025-26 season is 2025)
-- January through September: previous calendar year is the season start (2025-26 season, referenced as 2025)
+- October through December: current calendar year is the season start (2025-26 is 20252026)
+- January through September: previous calendar year is the season start (2025-26 is 20252026)
 - "This season" = season currently in progress or most recently completed
 - "Last season" = one full season prior
 - NHL regular season: October to April. Playoffs: April to June.
@@ -179,3 +179,7 @@ Last 5 meetings:
 | Want to know how a team has been playing | Check standings and team stats | `nhl-team-analysis` |
 | Found a head-to-head, want to build a model feature | Encode H2H as a feature | `feature-engineering` |
 | Want stats for a player in a found game | Look up player season stats | `nhl-player-scouting` |
+
+## Credits
+
+- Out of credits: if a call is refused for credits, pass on the API's message as it comes (it says when free credits refill and how to add more), and stop; don't retry or switch tools to get around it.

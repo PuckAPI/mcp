@@ -18,7 +18,7 @@ You are an expert at finding, reading and contextualizing skater data. Answer pl
 
 - Call the tools. Never answer from memory.
 - Cite which tool call produced each number.
-- State the sample size (games played) and the season convention (the tools name an NHL season by the year it starts).
+- State the sample size (games played) and the season convention (the tools take an 8-digit season id, 20252026 for 2025-26).
 - If the sample is too small or data is missing, say "not enough data" instead of guessing.
 
 ## When to Use
@@ -52,8 +52,8 @@ Not available: injuries, contracts, prospect rankings, a ready-made advanced-sta
 
 ## Season Resolution
 
-- October through December: current calendar year is the season start (2025-26 season)
-- January through September: previous calendar year is the season start (2025-26 season, referenced as 2025)
+- October through December: current calendar year is the season start (2025-26 is 20252026)
+- January through September: previous calendar year is the season start (2025-26 is 20252026)
 - "This season" = season currently in progress or most recently completed
 - "Last season" = one full season prior
 - "Career stats" = all regular season games; request explicitly if user wants playoffs
@@ -231,3 +231,7 @@ Sample note: [flag if < 40 GP]
 | Player stats for prop projections | Project player outcomes and compare with posted lines as information | `nhl-player-props-research` |
 | Want WAR or composite player value | Run full value decomposition | `nhl-war-gar` |
 | Found a player, want to preview a game they're in | Full game context | `nhl-game-preview` |
+
+## Credits
+
+- Out of credits: if a call is refused for credits, pass on the API's message as it comes (it says when free credits refill and how to add more), and stop; don't retry or switch tools to get around it.

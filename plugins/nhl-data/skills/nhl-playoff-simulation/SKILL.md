@@ -273,3 +273,7 @@ Anaheim Ducks      | 41%         | 87%
 | Want to compare simulation output with market prices | Show how our probability differs from the market probability | `market-vs-model` |
 | Want to backtest simulation accuracy | Test prior-season simulations vs outcomes | `backtesting` |
 | Want to preview a specific playoff matchup | Single-series matchup analysis | `nhl-game-preview` |
+
+## Credits
+
+- Out of credits: if a call is refused for credits, pass on the API's message as it comes (it says when free credits refill and how to add more), and stop; don't retry or switch tools to get around it.

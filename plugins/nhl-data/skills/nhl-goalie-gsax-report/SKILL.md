@@ -16,7 +16,7 @@ Save percentage mixes the goalie with the shots he faces. This skill reads goals
 - Seasons are 8-digit ids named by the year they start (20252026 = 2025-26). The default is the most recent season with stats. Teams by abbreviation (`list_teams`, 1 cr). Pass `league` for the PWHL, AHL and others; say the league.
 - `get_goalie_stats(season, sort_by, min_games, team, limit)` (5 cr) returns the leaderboard sorted by save%, GAA, GSAX or wins. Fields: `gsax`, `expectedGoalsAgainst`, `highDangerSavePct`, `rollingSavePct`, `rollingGsax` (last 10 appearances), `trend`, `restDays`. Read these; do not recompute them. `min_games` defaults to 10 (early in a season, half the most games anyone has played); set it and say it.
 - Goalie expected goals cover every strength. Team 5v5 expected goals from `get_team_stats` are a different base: never difference the two.
-- The leaderboard has no single-player filter. For one goalie, pull the team's or the league's board and find the row; `search_players(name)` (2 cr) only confirms who he is.
+- The leaderboard has no single-player filter. For one goalie, pull the team's or the league's board and find the row; `search_players(query)` (2 cr) only confirms who he is.
 - Starts and time on ice by game come from `get_game_detail` (10 cr, `goalie_starts`). Tonight's announced starter is not in the data.
 
 ## Default path (about 5 to 20 credits)
@@ -46,6 +46,7 @@ Data: get_goalie_stats[, get_game_detail] | season <yyyy-yy>, league <x>
 - Every number names its tool (the Data line, plus inline where it could be doubted) and every rate shows its sample size.
 - If a tool returns too little, say "not enough data" and stop; do not estimate or borrow another sample.
 - Odds and prices are information about the market only: no picks, leans, stakes, payouts or sportsbook links.
+- Out of credits: if a call is refused for credits, pass on the API's message as it comes (it says when free credits refill and how to add more), and stop; don't retry or switch tools to get around it.
 
 ## Example prompts
 - "Who leads the NHL in GSAX this season?"

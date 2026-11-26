@@ -12,7 +12,7 @@ metadata:
 > Use `get_shifts` (10 credits per game) for who was on the ice, `get_plays` (10 credits) for shot events with locations, `get_situation_time` (10 credits per game) for exact 5v5, power-play and shorthanded time, and `get_player_stats` (5 credits) for player bio data.
 > For the user's own shift data CSV/JSON, work with the file directly.
 
-You are an expert in advanced hockey player evaluation. Your goal is to compute WAR and GAR components for NHL skaters using RAPM (Regularized Adjusted Plus-Minus) ridge regression, then translate those into contract surplus value analysis and JFresh-style player cards.
+You are an expert in advanced hockey player evaluation. Your goal is to compute WAR and GAR components for NHL skaters using RAPM (Regularized Adjusted Plus-Minus) ridge regression, then translate those into contract surplus value analysis and component radar cards.
 
 ## When to Use
 
@@ -20,7 +20,7 @@ You are an expert in advanced hockey player evaluation. Your goal is to compute 
 - User wants to evaluate player value beyond box score stats
 - User asks about contract surplus value or cap efficiency
 - User wants to reproduce or extend a public WAR/GAR methodology
-- User wants to build a JFresh-style player card (radar chart of GAR components)
+- User wants to build a component radar card (radar chart of GAR components)
 - User asks about regularized adjusted plus-minus or ridge regression for player evaluation
 
 ## When NOT to Use
@@ -220,9 +220,9 @@ age_adjustment = {30: 0.95, 31: 0.90, 32: 0.83, 33: 0.75, 34: 0.65}
 adjusted_war = player_war * age_adjustment.get(player_age, 1.0)
 ```
 
-### Step 6: Player Card Output (JFresh-Style)
+### Step 6: Player Card Output (component radar)
 
-A JFresh-style player card shows the component breakdown on a radar chart. Six axes: EV Offense, EV Defense, PP, PK, Penalties Drawn, Penalties Taken. The chart immediately shows where a player's value comes from: a defensive specialist looks different from an offensive dynamo.
+A component radar card shows the component breakdown on a radar chart. Six axes: EV Offense, EV Defense, PP, PK, Penalties Drawn, Penalties Taken. The chart immediately shows where a player's value comes from: a defensive specialist looks different from an offensive dynamo.
 
 ```python
 import matplotlib.pyplot as plt
@@ -244,7 +244,7 @@ See `visualization` skill for full chart template.
 ## Season Resolution
 
 - October through December: current calendar year is the season start (2026-27 season)
-- January through September: previous calendar year is the season start (2025-26 season)
+- January through September: previous calendar year is the season start (2025-26 is 20252026)
 - "This season" = season currently in progress or most recently completed
 - WAR/GAR require a minimum of 200-300 minutes of ice time for stable estimates (roughly 20-25 games)
 - NHL regular season: October to April. Playoffs excluded from standard WAR calculation.
@@ -295,8 +295,12 @@ The WAR/GAR model produces:
 | What You Found | Next Action | Skill |
 |----------------|-------------|-------|
 | WAR computed, want contract surplus analysis | Use WAR * market rate vs AAV | Stay in this skill (Step 5) |
-| Component breakdown ready, want radar chart | Render JFresh-style player card | `visualization` |
+| Component breakdown ready, want radar chart | Render component radar card | `visualization` |
 | Want to use WAR as a model feature for game prediction | Treat WAR as a team-level sum feature (sum of skater WARs) | `feature-engineering` |
 | Need to evaluate goalie value separately | Goalies use GSAA, not WAR | `nhl-goalie-analysis` |
 | Want to compare players for trade analysis | Use surplus value + component breakdown | `nhl-player-scouting` |
 | RAPM estimates look noisy | Check sample size per player; increase regularization or add seasons | `walk-forward-validation` for stability check |
+
+## Credits
+
+- Out of credits: if a call is refused for credits, pass on the API's message as it comes (it says when free credits refill and how to add more), and stop; don't retry or switch tools to get around it.
