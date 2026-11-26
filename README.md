@@ -106,12 +106,12 @@ claude mcp add --transport http puckapi \
 
 ## Starter projects
 
-- [nhl-xg-model](https://github.com/noahowsh/nhl-xg-model): a season of shot locations to a calibrated expected-goals model, in one Python script.
+- [nhl-xg-model](https://github.com/sports-data-hq/nhl-xg-model): a season of shot locations to a calibrated expected-goals model, in one Python script.
 
 ## Use it in
 
 - **Claude, ChatGPT, Cursor, VS Code, Gemini CLI, Grok, Perplexity, Le Chat:** add `https://mcp.puckapi.com/mcp` as a remote MCP server. Step-by-step for each: https://puckapi.com/mcp?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp
-- **Cursor:** the [SportsDataHQ plugins for Cursor](https://github.com/noahowsh/sportsdatahq-cursor-plugins)
+- **Cursor:** the [SportsDataHQ plugins for Cursor](https://github.com/sports-data-hq/sportsdatahq-cursor-plugins)
 - **Google Sheets:** `=SDHQ("puckapi","list_teams")` fills a live table: https://sportsdatahq.com/sheets?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp
 - **Claude Code skills:** [28 free NHL analytics skills](https://github.com/PuckAPI/claude-sports-analytics)
 - **REST:** `POST https://mcp.puckapi.com/v1/<tool>` with an `x-api-key` header: https://puckapi.com/docs?utm_source=github&utm_medium=readme&utm_campaign=puckapi-mcp
@@ -212,13 +212,13 @@ Full documentation at [puckapi.com/docs](https://puckapi.com/docs?utm_source=git
 
 | | |
 |---|---|
-| **[EndzoneAPI](https://github.com/noahowsh/endzoneapi-mcp)** | NFL and college football |
-| **[DunkAPI](https://github.com/noahowsh/dunkapi-mcp)** | NBA, WNBA and college basketball |
-| **[FastballAPI](https://github.com/noahowsh/fastballapi-mcp)** | MLB and college baseball |
-| **[StrikerAPI](https://github.com/noahowsh/strikerapi-mcp)** | Soccer, 17 competitions |
-| **[AcesAPI](https://github.com/noahowsh/acesapi-mcp)** | ATP and WTA tennis |
-| **[BirdieAPI](https://github.com/noahowsh/birdieapi-mcp)** | PGA Tour and other golf tours |
-| **[FighterAPI](https://github.com/noahowsh/fighterapi-mcp)** | UFC, PFL and Bellator |
+| **[EndzoneAPI](https://github.com/sports-data-hq/endzoneapi-mcp)** | NFL and college football |
+| **[DunkAPI](https://github.com/sports-data-hq/dunkapi-mcp)** | NBA, WNBA and college basketball |
+| **[FastballAPI](https://github.com/sports-data-hq/fastballapi-mcp)** | MLB and college baseball |
+| **[StrikerAPI](https://github.com/sports-data-hq/strikerapi-mcp)** | Soccer, 17 competitions |
+| **[AcesAPI](https://github.com/sports-data-hq/acesapi-mcp)** | ATP and WTA tennis |
+| **[BirdieAPI](https://github.com/sports-data-hq/birdieapi-mcp)** | PGA Tour and other golf tours |
+| **[FighterAPI](https://github.com/sports-data-hq/fighterapi-mcp)** | UFC, PFL and Bellator |
 
 ---
 
