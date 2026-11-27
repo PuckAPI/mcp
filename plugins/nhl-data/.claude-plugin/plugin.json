@@ -1,7 +1,7 @@
 {
   "name": "nhl-data",
   "displayName": "PuckAPI: hockey skills",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "description": "Hockey analysis skills on PuckAPI: game previews, player and team research, and the community's standard metrics, with every number pulled live from the PuckAPI MCP server.",
   "author": {
     "name": "SportsDataHQ",
@@ -19,5 +19,7 @@
     "gsax",
     "sports-data",
     "puckapi"
-  ]
+  ],
+  "privacyPolicyUrl": "https://puckapi.com/privacy",
+  "icon": ".claude-plugin/icon.png"
 }
